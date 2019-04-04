@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     public int health = 3;
 
-    public float speed = 1f;
+    public float speed = 0.1f;
 
     float horizontalMovement = 0f;
     float verticalMovement = 0f;
@@ -25,11 +25,23 @@ public class PlayerController : MonoBehaviour
         //TODO Change movement to a separate method
         horizontalMovement = verticalMovement = 0f;
 
-        if (Input.GetAxis("Horizontal") > 0) horizontalMovement = speed;
-        else if (Input.GetAxis("Horizontal") < 0) horizontalMovement = -speed;
+        if (Input.GetAxis("Horizontal") > 0f)
+        {
+            horizontalMovement = speed;
+        }
+        else if (Input.GetAxis("Horizontal") < 0f)
+        {
+            horizontalMovement = -speed;
+        }
 
-        if (Input.GetAxis("Vertical") > 0) verticalMovement = speed;
-        else if (Input.GetAxis("Vertical") < 0) verticalMovement = -speed;
+        if (Input.GetAxis("Vertical") > 0f)
+        {
+            verticalMovement = speed;
+        }
+        else if (Input.GetAxis("Vertical") < 0f)
+        {
+            verticalMovement = -speed;
+        }
 
         transform.position += (Vector3)(new Vector2(horizontalMovement, verticalMovement));
     }

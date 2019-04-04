@@ -161,7 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPosition: {x: 0, y: 0}
   health: 3
-  speed: 40
+  speed: 0.1
 --- !u!50 &283052036
 Rigidbody2D:
   serializedVersion: 4
@@ -176,12 +176,12 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &283052037
 CircleCollider2D:
@@ -198,7 +198,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.0001
 --- !u!1 &960494198
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,14 +229,14 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &960494200
 CircleCollider2D:
@@ -253,7 +253,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.0001
 --- !u!4 &960494202
 Transform:
   m_ObjectHideFlags: 0
