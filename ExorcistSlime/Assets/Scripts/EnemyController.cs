@@ -6,6 +6,7 @@ public class EnemyController : CharacterController
 {
     public float shootingTimer;
     public GameObject bulletPrefab;
+    public Transform firePoint;
 
     public void Awake()
     {
@@ -16,7 +17,7 @@ public class EnemyController : CharacterController
     {
         while (true)
         {
-            Instantiate(bulletPrefab, this.transform.position, this.transform.rotation);
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             yield return new WaitForSeconds(shootingTimer);
         }
     }

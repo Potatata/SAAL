@@ -13,6 +13,7 @@ public class PlayerController : CharacterController
     void Start()
     {
         health = 3;
+        PrintHealth();
         currentPosition = transform.position;
         speed = 0.1f;
     }
@@ -46,5 +47,28 @@ public class PlayerController : CharacterController
         }
 
         transform.position += (Vector3)(new Vector2(horizontalMovement, verticalMovement));
+    }
+
+    void PrintHealth()
+    {
+        healthText.text = "Health: " + health.ToString();
+    }
+
+    void OnTriggerEnter2D(Collider2D objectHit)
+    {
+        //If it hit a bullet
+        if (objectHit.gameObject.GetComponent<BulletController>())
+        {
+            //Take damage and check if he died
+            --health;
+            PrintHealth();
+            if (health <= 0)
+                Died();
+        }
+    }
+
+    void Died()
+    {
+        Debug.Log("I am deded. Press F to pay respect.");
     }
 }
