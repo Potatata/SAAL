@@ -2,13 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : CharacterController
 {
     public Vector2 currentPosition;
-
-    public int health = 3;
-
-    public float speed = 0.1f;
 
     float horizontalMovement = 0f;
     float verticalMovement = 0f;
@@ -16,13 +12,19 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        health = 3;
         currentPosition = transform.position;
+        speed = 0.1f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //TODO Change movement to a separate method
+        Move();
+    }
+
+    void Move()
+    {
         horizontalMovement = verticalMovement = 0f;
 
         if (Input.GetAxis("Horizontal") > 0f)
