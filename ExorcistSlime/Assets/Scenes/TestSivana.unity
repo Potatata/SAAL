@@ -188,7 +188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158801888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.36, y: -0.08, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -201,6 +201,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8009338017226474222, guid: 141ae314414d75840981a0b262cb05ae,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2008741042997313284, guid: 141ae314414d75840981a0b262cb05ae,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 6548603763535916717, guid: 5dd847e35e877344a833fbc4922f2a84,
+        type: 3}
+    - target: {fileID: 2008741042997313284, guid: 141ae314414d75840981a0b262cb05ae,
+        type: 3}
+      propertyPath: shootingTimer
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009338016715685496, guid: 141ae314414d75840981a0b262cb05ae,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1845847889631767277, guid: 141ae314414d75840981a0b262cb05ae,
         type: 3}
       propertyPath: m_Name

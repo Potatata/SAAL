@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class EnemyController : CharacterController
 {
-    // Start is called before the first frame update
-    void Start()
+    public float shootingTimer;
+    public GameObject bulletPrefab;
+
+    public void Awake()
     {
-        
+        StartCoroutine(Shoot());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator Shoot()
     {
-        
+        while (true)
+        {
+            Instantiate(bulletPrefab, this.transform.position, this.transform.rotation);
+            yield return new WaitForSeconds(shootingTimer);
+        }
     }
 }
