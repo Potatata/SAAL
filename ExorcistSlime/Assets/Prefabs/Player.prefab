@@ -210,6 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   speed: 0.1
+  healthText: {fileID: 0}
   currentPosition: {x: 0, y: 0}
 --- !u!58 &7440482121692209071
 CircleCollider2D:
@@ -226,7 +227,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.0001
+  m_Radius: 0.45
 --- !u!50 &7440482121692209070
 Rigidbody2D:
   serializedVersion: 4

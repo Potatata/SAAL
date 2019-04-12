@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TestSivana.unity
+    guid: 0abfcf307cbd5944aaf248a84d489d78
+  - enabled: 1
+    path: Assets/Scenes/FirstStage.unity
+    guid: ef0a06090b238604e83d738d7ed2d22d
+  - enabled: 1
+    path: Assets/Scenes/SecondStage.unity
+    guid: 7c5b6d88ce12e0a43a4339886b9e3238
   m_configObjects: {}
