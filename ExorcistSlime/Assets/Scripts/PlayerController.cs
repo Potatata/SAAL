@@ -1,52 +1,50 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : CharacterController
 {
-    public Vector2 currentPosition;
+    //Constants
+    private readonly float INITIAL_SPEED = 0.1f;
+    private readonly int INITIAL_HEALTH = 3;
 
-    float horizontalMovement = 0f;
-    float verticalMovement = 0f;
+    //Fields
+    public Vector2 currentPosition;
+    public float dashTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        health = 3;
+        health = INITIAL_HEALTH;
         PrintHealth();
         currentPosition = transform.position;
-        speed = 0.1f;
+        speed = INITIAL_SPEED;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Dash();
         Move();
     }
 
     void Move()
     {
-        horizontalMovement = verticalMovement = 0f;
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+        transform.position = transform.position + movement * speed;
+    }
 
-        if (Input.GetAxis("Horizontal") > 0f)
+    void Dash()
+    {
+        if (Input.GetKeyDown("space"))
         {
-            horizontalMovement = speed;
+            Debug.Log("DASH!");
+            dashTime = Time.deltaTime*10;
+            speed = INITIAL_SPEED * 5;
         }
-        else if (Input.GetAxis("Horizontal") < 0f)
+        else
         {
-            horizontalMovement = -speed;
+            if (dashTime <= 0.0f) speed = INITIAL_SPEED;
+            else dashTime -= Time.deltaTime;
         }
-
-        if (Input.GetAxis("Vertical") > 0f)
-        {
-            verticalMovement = speed;
-        }
-        else if (Input.GetAxis("Vertical") < 0f)
-        {
-            verticalMovement = -speed;
-        }
-
-        transform.position += (Vector3)(new Vector2(horizontalMovement, verticalMovement));
     }
 
     void PrintHealth()
