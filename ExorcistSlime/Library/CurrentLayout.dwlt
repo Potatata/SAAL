@@ -42,12 +42,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
+    width: 1920
+    height: 947
+  m_MinSize: {x: 683, y: 498}
+  m_MaxSize: {x: 14004, y: 14048}
+  vertical: 0
+  controlID: 58
+=======
     width: 1366
     height: 675
   m_MinSize: {x: 681, y: 348}
   m_MaxSize: {x: 12006, y: 8048}
   vertical: 0
   controlID: 16
+>>>>>>> master
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -92,8 +101,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 404
+    height: 559
+=======
     width: 288
     height: 398
+>>>>>>> master
   m_MinSize: {x: 202, y: 224}
   m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 16}
@@ -214,12 +228,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 1360
+    height: 947
+  m_MinSize: {x: 406, y: 498}
+  m_MaxSize: {x: 10002, y: 14048}
+  vertical: 1
+  controlID: 59
+=======
     width: 968
     height: 675
   m_MinSize: {x: 406, y: 348}
   m_MaxSize: {x: 8006, y: 8048}
   vertical: 1
   controlID: 71
+>>>>>>> master
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -239,12 +262,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 1360
+    height: 559
+  m_MinSize: {x: 406, y: 224}
+  m_MaxSize: {x: 8006, y: 4024}
+  vertical: 0
+  controlID: 60
+=======
     width: 968
     height: 398
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
   controlID: 72
+>>>>>>> master
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -368,6 +400,15 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
+    - Assets/Prefabs
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Prefabs
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: D:\SAL\ExorcistSlime
+=======
     - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
@@ -375,13 +416,20 @@ MonoBehaviour:
   - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\luisp\Documents\GitHub\SAL\ExorcistSlime
+>>>>>>> master
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
+    m_SelectedIDs: a42b0000
+    m_LastClickedID: 11172
+    m_ExpandedIDs: 00000000d42a000000ca9a3b
+=======
     m_SelectedIDs: f6260000
     m_LastClickedID: 9974
     m_ExpandedIDs: 000000001026000000ca9a3b
+>>>>>>> master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -409,7 +457,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
+    m_ExpandedIDs: 00000000d42a0000
+=======
     m_ExpandedIDs: 0000000010260000
+>>>>>>> master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -528,9 +580,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
+      m_SelectedIDs: 8e360000
+      m_LastClickedID: 13966
+      m_ExpandedIDs: 
+=======
       m_SelectedIDs: f695ffff
       m_LastClickedID: -27146
       m_ExpandedIDs: 0896ffff4697ffff549affff809bffff4a9cffff549cffff1ca7ffffd6fbffff3c3500004836000078370000
+>>>>>>> master
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -580,14 +638,20 @@ MonoBehaviour:
     height: 378
   m_PersistentViewDataDictionary: {fileID: 0}
   m_WindowGUID: 1cf55738123c1c249899cf946931a8b0
-  m_SceneLighting: 1
+  m_SceneLighting: 0
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
+    m_Target: {x: 3.2591324, y: 0.060674153, z: -0.055814296}
+    speed: 2
+    m_Value: {x: 3.2591324, y: 0.060674153, z: -0.055814296}
+=======
     m_Target: {x: -2.517603, y: -2.491129, z: 0.20503244}
     speed: 2
     m_Value: {x: -2.517603, y: -2.491129, z: 0.20503244}
+>>>>>>> master
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -619,9 +683,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
+    m_Target: 6.1598997
+    speed: 2
+    m_Value: 6.1598997
+=======
     m_Target: 9.237809
     speed: 2
     m_Value: 9.237809
+>>>>>>> master
   m_Ortho:
     m_Target: 1
     speed: 2
