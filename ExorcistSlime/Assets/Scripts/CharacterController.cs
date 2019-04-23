@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour
 {
+    //Fields
     public int health;
     public float speed;
     public Text healthText;
