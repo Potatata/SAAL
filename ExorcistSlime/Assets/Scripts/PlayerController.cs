@@ -29,7 +29,16 @@ public class PlayerController : CharacterController
     void Move()
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+
+        RaycastHit2D[] results = new RaycastHit2D[16];
+        int cnt = GetComponent<Rigidbody2D>().Cast(movement, results, movement.magnitude/3);
+        if (cnt > 0)
+        {
+            speed = 0;
+            Debug.Log("I'm colliding!.");
+        }
         transform.position = transform.position + movement * speed;
+
     }
 
     void Dash()
