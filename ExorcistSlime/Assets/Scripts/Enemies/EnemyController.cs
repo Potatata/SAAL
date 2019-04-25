@@ -33,6 +33,7 @@ public class EnemyController : CharacterController
             {
                 //Creates the bullet
                 var bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation).GetComponent<BulletController>();
+                Debug.Log(bullet);
                 bullet.Initialize(bullets[index]);
             }
             yield return new WaitForSeconds(shootingTimer);

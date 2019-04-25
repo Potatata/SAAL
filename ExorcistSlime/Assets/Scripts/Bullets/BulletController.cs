@@ -9,7 +9,7 @@ public class BulletController : MonoBehaviour
     {
         this.bulletSpeed = bulletSpeed;
     }
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class BulletController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D objectHit)
     {
 
-        if (!objectHit.gameObject.GetComponent<EnemyController>()  && !objectHit.gameObject.GetComponent<BulletController>())
+        if (!objectHit.gameObject.GetComponent<EnemyController>() && !objectHit.gameObject.GetComponent<BulletController>())
         {
             Destroy(gameObject);
         }

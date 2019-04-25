@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class EnemyDiagonalController : EnemyController
+﻿public class EnemyDiagonalController : EnemyController
 {
     public override void Awake()
     {
@@ -12,10 +8,5 @@ public class EnemyDiagonalController : EnemyController
         bullets.Add(new BulletSpeed() { Up = -2, Right = -2 });
         bullets.Add(new BulletSpeed() { Up = -2, Right = 2 });
         bullets.Add(new BulletSpeed() { Up = 2, Right = -2 });
-    }
-
-    public override void Move()
-    {
-
     }
 }

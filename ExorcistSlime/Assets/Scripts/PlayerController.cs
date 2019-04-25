@@ -35,7 +35,7 @@ public class PlayerController : CharacterController
         if (cnt > 0)
         {
             speed = 0;
-            Debug.Log("I'm colliding!.");
+            //Debug.Log("I'm colliding!.");
         }
         transform.position = transform.position + movement * speed;
     }
@@ -44,7 +44,7 @@ public class PlayerController : CharacterController
     {
         if (Input.GetKeyDown("space"))
         {
-            Debug.Log("DASH!");
+            //Debug.Log("DASH!");
             dashTime = Time.deltaTime*10;
             speed = INITIAL_SPEED * 5;
         }
@@ -75,6 +75,6 @@ public class PlayerController : CharacterController
 
     void Died()
     {
-        Debug.Log("I am deded. Press F to pay respect.");
+        //Debug.Log("I am deded. Press F to pay respect.");
     }
 }
