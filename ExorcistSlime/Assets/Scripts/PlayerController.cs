@@ -26,7 +26,7 @@ public class PlayerController : CharacterController
         Move();
     }
 
-    void Move()
+    public override void Move()
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
 
@@ -38,7 +38,6 @@ public class PlayerController : CharacterController
             Debug.Log("I'm colliding!.");
         }
         transform.position = transform.position + movement * speed;
-
     }
 
     void Dash()
