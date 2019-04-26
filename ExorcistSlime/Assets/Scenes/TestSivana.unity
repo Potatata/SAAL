@@ -483,12 +483,12 @@ PrefabInstance:
     - target: {fileID: 8866998663044743929, guid: d67324202d4d17e418bd0eb64dfc7493,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.07
+      value: 1.18
       objectReference: {fileID: 0}
     - target: {fileID: 8866998663044743929, guid: d67324202d4d17e418bd0eb64dfc7493,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.87
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8866998663044743929, guid: d67324202d4d17e418bd0eb64dfc7493,
         type: 3}
@@ -534,6 +534,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2443398815476142673, guid: d67324202d4d17e418bd0eb64dfc7493,
+        type: 3}
+      propertyPath: shootingTimer
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2443398815476142673, guid: d67324202d4d17e418bd0eb64dfc7493,
+        type: 3}
+      propertyPath: movementSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d67324202d4d17e418bd0eb64dfc7493, type: 3}

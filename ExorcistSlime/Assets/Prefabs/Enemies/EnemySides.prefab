@@ -91,16 +91,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1749393373718694735}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfc54a632f017864cb6471cb530a31a9, type: 3}
+  m_Script: {fileID: 11500000, guid: ee36ac0b85d93be4fb43e6d0fa050f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  speed: 0
+  movementSpeed: 0
   healthText: {fileID: 0}
-  shootingTimer: 3
+  shootingTimer: 0
   bulletPrefab: {fileID: 2577315237401998270, guid: 4fcb345ddff612d4ab5885b86ab2c89e,
     type: 3}
-  firePoint: {fileID: 7314907237725132995}
+  firePoint: {fileID: 0}
+  taunted: 0
 --- !u!1 &1749393374212962258
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +192,7 @@ GameObject:
   - component: {fileID: 7314907237725132995}
   m_Layer: 0
   m_Name: FirePoint
-  m_TagString: Untagged
+  m_TagString: FirePoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

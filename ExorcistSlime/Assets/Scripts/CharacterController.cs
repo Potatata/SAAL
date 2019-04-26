@@ -7,7 +7,7 @@ using UnityEngine.UI;
 {
     //Fields
     public int health;
-    public float speed;
+    public float movementSpeed;
     public Text healthText;
 
 

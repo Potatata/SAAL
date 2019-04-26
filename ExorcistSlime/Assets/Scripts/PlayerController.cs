@@ -16,7 +16,7 @@ public class PlayerController : CharacterController
         health = INITIAL_HEALTH;
         PrintHealth();
         currentPosition = transform.position;
-        speed = INITIAL_SPEED;
+        movementSpeed = INITIAL_SPEED;
     }
 
     // Update is called once per frame
@@ -34,10 +34,10 @@ public class PlayerController : CharacterController
         int cnt = GetComponent<Rigidbody2D>().Cast(movement, results, movement.magnitude/3);
         if (cnt > 0)
         {
-            speed = 0;
+            movementSpeed = 0;
             //Debug.Log("I'm colliding!.");
         }
-        transform.position = transform.position + movement * speed;
+        transform.position = transform.position + movement * movementSpeed;
     }
 
     void Dash()
@@ -46,11 +46,11 @@ public class PlayerController : CharacterController
         {
             //Debug.Log("DASH!");
             dashTime = Time.deltaTime*10;
-            speed = INITIAL_SPEED * 5;
+            movementSpeed = INITIAL_SPEED * 5;
         }
         else
         {
-            if (dashTime <= 0.0f) speed = INITIAL_SPEED;
+            if (dashTime <= 0.0f) movementSpeed = INITIAL_SPEED;
             else dashTime -= Time.deltaTime;
         }
     }

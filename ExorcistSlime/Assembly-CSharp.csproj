@@ -59,10 +59,11 @@
      <Compile Include="Assets\Scripts\Bullets\BulletType.cs" />
      <Compile Include="Assets\Scripts\Bullets\BulletWithSetDirectionController.cs" />
      <Compile Include="Assets\Scripts\CharacterController.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemiesMovePatterns\IEnemyMovePattern.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemiesType\EnemyDiagonalController.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemiesType\EnemySidesController.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemiesType\EnemySimpleShootsAtPlayerController.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyController.cs" />
-     <Compile Include="Assets\Scripts\Enemies\EnemyDiagonalController.cs" />
-     <Compile Include="Assets\Scripts\Enemies\EnemySidesController.cs" />
-     <Compile Include="Assets\Scripts\Enemies\EnemySimpleShootsAtPlayerController.cs" />
      <Compile Include="Assets\Scripts\NextStage.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\UnloadStage.cs" />
