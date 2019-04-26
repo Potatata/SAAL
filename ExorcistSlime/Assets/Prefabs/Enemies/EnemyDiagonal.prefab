@@ -97,8 +97,8 @@ MonoBehaviour:
   health: 0
   speed: 0
   healthText: {fileID: 0}
-  shootingTimer: 0.5
-  bulletPrefab: {fileID: 6548603763535916717, guid: 5dd847e35e877344a833fbc4922f2a84,
+  shootingTimer: 3
+  bulletPrefab: {fileID: 2577315237401998270, guid: 4fcb345ddff612d4ab5885b86ab2c89e,
     type: 3}
   firePoint: {fileID: 6909269177548269918}
 --- !u!1 &2460789301495531087

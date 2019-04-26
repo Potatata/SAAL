@@ -1,20 +1,18 @@
 ﻿using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public abstract class BulletController : MonoBehaviour
 {
-    public BulletSpeed bulletSpeed;
-    public Rigidbody2D rb;
+    public BulletType bulletType;
+    protected Rigidbody2D rb;
 
-    public void Initialize(BulletSpeed bulletSpeed)
+    public void Initialize(BulletType bulletType)
     {
-        this.bulletSpeed = bulletSpeed;
+        this.bulletType = bulletType;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        rb.velocity = transform.right * bulletSpeed.Right + transform.up * bulletSpeed.Up;
-    }
+    public abstract void Start();
 
     void OnTriggerEnter2D(Collider2D objectHit)
     {

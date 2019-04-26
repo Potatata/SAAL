@@ -7,11 +7,11 @@ public class EnemyController : CharacterController
     public float shootingTimer;
     public GameObject bulletPrefab;
     public Transform firePoint;
-    protected List<BulletSpeed> bullets;
+    protected List<BulletType> bullets;
 
     public virtual void Awake()
     {
-        bullets = new List<BulletSpeed>() { };
+        bullets = new List<BulletType>() { };
     }
 
     public void Start()
@@ -33,7 +33,6 @@ public class EnemyController : CharacterController
             {
                 //Creates the bullet
                 var bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation).GetComponent<BulletController>();
-                Debug.Log(bullet);
                 bullet.Initialize(bullets[index]);
             }
             yield return new WaitForSeconds(shootingTimer);

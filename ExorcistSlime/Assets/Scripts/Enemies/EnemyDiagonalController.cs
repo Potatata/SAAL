@@ -4,9 +4,9 @@
     {
         base.Awake();
         //Starts all the bullets
-        bullets.Add(new BulletSpeed() { Up = 2, Right = 2 });
-        bullets.Add(new BulletSpeed() { Up = -2, Right = -2 });
-        bullets.Add(new BulletSpeed() { Up = -2, Right = 2 });
-        bullets.Add(new BulletSpeed() { Up = 2, Right = -2 });
+        bullets.Add(new BulletSetDirection() { Up = 2, Right = 2 });
+        bullets.Add(new BulletSetDirection() { Up = -2, Right = -2 });
+        bullets.Add(new BulletSetDirection() { Up = -2, Right = 2 });
+        bullets.Add(new BulletSetDirection() { Up = 2, Right = -2 });
     }
 }
