@@ -16,7 +16,7 @@ public class PlayerController : CharacterController
         health = INITIAL_HEALTH;
         PrintHealth();
         currentPosition = transform.position;
-        speed = INITIAL_SPEED;
+        movementSpeed = INITIAL_SPEED;
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class PlayerController : CharacterController
         Move();
     }
 
-    void Move()
+    public override void Move()
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
 
@@ -34,24 +34,23 @@ public class PlayerController : CharacterController
         int cnt = GetComponent<Rigidbody2D>().Cast(movement, results, movement.magnitude/3);
         if (cnt > 0)
         {
-            speed = 0;
-            Debug.Log("I'm colliding!.");
+            movementSpeed = 0;
+            //Debug.Log("I'm colliding!.");
         }
-        transform.position = transform.position + movement * speed;
-
+        transform.position = transform.position + movement * movementSpeed;
     }
 
     void Dash()
     {
         if (Input.GetKeyDown("space"))
         {
-            Debug.Log("DASH!");
+            //Debug.Log("DASH!");
             dashTime = Time.deltaTime*10;
-            speed = INITIAL_SPEED * 5;
+            movementSpeed = INITIAL_SPEED * 5;
         }
         else
         {
-            if (dashTime <= 0.0f) speed = INITIAL_SPEED;
+            if (dashTime <= 0.0f) movementSpeed = INITIAL_SPEED;
             else dashTime -= Time.deltaTime;
         }
     }
@@ -76,6 +75,6 @@ public class PlayerController : CharacterController
 
     void Died()
     {
-        Debug.Log("I am deded. Press F to pay respect.");
+        //Debug.Log("I am deded. Press F to pay respect.");
     }
 }

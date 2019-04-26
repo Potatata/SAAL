@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterController : MonoBehaviour
+ public abstract class CharacterController : MonoBehaviour
 {
     //Fields
     public int health;
-    public float speed;
+    public float movementSpeed;
     public Text healthText;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
+     public abstract void Move();
+
 }
