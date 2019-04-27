@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 684ee7891511cbe40839fefaf68e28e6
+guid: 673a7a66dd54e2c46b549f41fe2071ff
 TextureImporter:
   fileIDToRecycleName:
-    21300000: LevelDesignTest_0
-    21300002: LevelDesignTest_1
-    21300004: LevelDesignTest_2
-    21300006: LevelDesignTest_3
+    21300000: StageColorTest_0
+    21300002: StageColorTest_1
+    21300004: StageColorTest_2
+    21300006: StageColorTest_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -49,7 +49,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10000
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -88,27 +88,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LevelDesignTest_0
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4a5ca12f1b039941ac311be441645e8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LevelDesignTest_1
+      name: StageColorTest_0
       rect:
         serializedVersion: 2
         x: 0
@@ -122,13 +102,33 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1755cf23fb697814fb2d19d711e95a4f
+      spriteID: b0c324806ef33004fade7f29f67969c0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LevelDesignTest_2
+      name: StageColorTest_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0d8e616e0e0a244b7127036b7c6457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StageColorTest_2
       rect:
         serializedVersion: 2
         x: 32
@@ -142,13 +142,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fead9c4f681f891488c1610add9251af
+      spriteID: e359c52cbc76ac64390592ffa94930d7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LevelDesignTest_3
+      name: StageColorTest_3
       rect:
         serializedVersion: 2
         x: 0
@@ -162,7 +162,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c378614652d70b4ea410e99415b4899
+      spriteID: 465ded07670de5d4a8c6d8543b6a0389
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 717aa83b7e49c6d40bc599be8fdefb85
+    spriteID: 5d701471fa6284849bb6e75a627768ae
     vertices: []
     indices: 
     edges: []

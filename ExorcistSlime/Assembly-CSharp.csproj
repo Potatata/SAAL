@@ -60,7 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AnyManager.cs" />
     <Compile Include="Assets\Scripts\Bullets\BulletController.cs" />
     <Compile Include="Assets\Scripts\Bullets\BulletShootsAtPlayerController.cs" />
     <Compile Include="Assets\Scripts\Bullets\BulletType.cs" />
@@ -71,8 +70,9 @@
     <Compile Include="Assets\Scripts\Enemies\EnemiesType\EnemySidesController.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemiesType\EnemySimpleShootsAtPlayerController.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyController.cs" />
-    <Compile Include="Assets\Scripts\NextStage.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Stages\AnyManager.cs" />
+    <Compile Include="Assets\Scripts\Stages\NextStage.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Arven/Desktop/SAL/ExorcistSlime/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
