@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Enemies\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\TopDownMovementController2D.cs" />
+    <Compile Include="Assets\Scripts\SaltController.cs" />
     <Compile Include="Assets\Scripts\Stages\AnyManager.cs" />
     <Compile Include="Assets\Scripts\Stages\NextStage.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
