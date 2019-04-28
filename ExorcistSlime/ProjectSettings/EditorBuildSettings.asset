@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TestSivana.unity
+    path: Assets/Scenes/Test.unity
     guid: 0abfcf307cbd5944aaf248a84d489d78
   - enabled: 1
     path: Assets/Scenes/FirstStage.unity

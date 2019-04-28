@@ -70,6 +70,7 @@ public class EnemyController : CharacterController
             {
                 //Creates the bullet
                 var bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation).GetComponent<BulletController>();
+                bullet.gameObject.layer = 8;
                 bullet.Initialize(bullets[index]);
             }
             yield return new WaitForSeconds(shootingTimer);
