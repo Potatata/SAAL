@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Prime31;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,11 +12,11 @@ public class PlayerController : MonoBehaviour
     // Movement configuration
     public float speed = SPEED;
     public int dashTime = 0;
-    public int health;
 
     //Fields
     private TopDownMovementController2D _controller;
 	private Vector3 _velocity;
+    public GameObject saltPrefab;
 
     void Awake()
 	{
@@ -24,22 +25,29 @@ public class PlayerController : MonoBehaviour
 
     void Dash()
     {
-        //Player dash mechanic
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") != 0)
         {
-            dashTime = DASH_TIME;
-            speed = DASH_SPEED;
-            Debug.Log("Dashing!");
-        }
-        else
-        {
-            if (dashTime <= 0) speed = SPEED;
+            //Player dash mechanic
+            if (Input.GetButtonDown("Fire1"))
+            {
+                dashTime = DASH_TIME;
+                speed = DASH_SPEED;
+                Debug.Log("Dashing!");
+            }
             else
             {
-                --dashTime;
-                Debug.Log("Leaving trail!");
+                if (dashTime <= 0) speed = SPEED;
+                else
+                {
+                    --dashTime;
+                    LeaveTrail();
+                }
             }
         }
+    }
+
+    private void LeaveTrail() {
+        Instantiate(saltPrefab, this.transform.position, this.transform.rotation);
     }
 
     void Move()
