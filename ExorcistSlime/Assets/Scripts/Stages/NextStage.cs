@@ -6,34 +6,21 @@ using UnityEngine.SceneManagement;
 public class NextStage : MonoBehaviour
 {
 
-    public int scene;
+    public int currentScene;
     bool loaded;
-    public int oldScene;
-    bool pastSceneUnloaded;
 
     //Trigger to enter the next stage
-    private void OnTriggerEnter2D()
+    private void OnTriggerEnter2D(Collider2D objectHit)
     {
-        //Loads the next stage and unload the old scene
-        if (!loaded)
+        if (objectHit.gameObject.GetComponent<PlayerController>())
         {
-            Debug.Log("Se cargó la escena");
-            GameObject player = GameObject.Find("Player");
-            SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
-            //Sets the player position on the top of the level
-            if (player != null)
+            //Loads the next stage and unload the old scene
+            if (!loaded)
             {
-                player.transform.position = new Vector2(21, 26);
+                Debug.Log("Scene loaded!");
+                SceneController.anyManager.LoadNextScene(currentScene);
+                loaded = true;
             }
-            loaded = true;
         }
-        if (!pastSceneUnloaded)
-        {
-            Debug.Log("Se eliminó la escena");
-            AnyManager.anyManager.UnloadScene(oldScene);
-            pastSceneUnloaded = true;
-        }
-
-
     }
 }
