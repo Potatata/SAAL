@@ -6,8 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     //Constants
     private const float SPEED = 16f;
-    private const int DASH_TIME = 3;
-    private const float DASH_SPEED = SPEED*SPEED;
+    private const int DASH_TIME = 10 ;
+    private const float DASH_SPEED = SPEED*3;
 
     // Movement configuration
     public float speed = SPEED;
@@ -17,10 +17,24 @@ public class PlayerController : MonoBehaviour
     private TopDownMovementController2D _controller;
 	private Vector3 _velocity;
     public GameObject saltPrefab;
+    public bool isdashing = false;
 
     void Awake()
 	{
 		_controller = GetComponent<TopDownMovementController2D>();
+    }
+
+    IEnumerator MakeTrail()
+    {
+        isdashing = true;
+        for (int i = 0; i < DASH_TIME; i++)
+        {
+            LeaveTrail();
+            yield return new WaitForSeconds(0.007f);
+
+        }
+        speed = SPEED;
+        isdashing = false;
     }
 
     void Dash()
@@ -28,20 +42,21 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") != 0)
         {
             //Player dash mechanic
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") && !isdashing)
             {
                 dashTime = DASH_TIME;
                 speed = DASH_SPEED;
                 Debug.Log("Dashing!");
+                StartCoroutine(MakeTrail());
             }
             else
             {
-                if (dashTime <= 0) speed = SPEED;
+             /*  if (dashTime <= 0) speed = SPEED;
                 else
                 {
                     --dashTime;
                     LeaveTrail();
-                }
+                }*/
             }
         }
     }
