@@ -58,7 +58,8 @@
      <Compile Include="Assets\Scripts\Bullets\BulletType.cs" />
      <Compile Include="Assets\Scripts\Bullets\BulletWithSetDirectionController.cs" />
      <Compile Include="Assets\Scripts\CharacterController.cs" />
-     <Compile Include="Assets\Scripts\Enemies\EnemiesMovePatterns\IEnemyMovePattern.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemiesMovePatterns\EnemyMovePattern.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemiesMovePatterns\EnemyMoveToPlayer.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemiesType\EnemyDiagonalController.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemiesType\EnemySidesController.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemiesType\EnemySimpleShootsAtPlayerController.cs" />

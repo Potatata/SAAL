@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : CharacterController
+public abstract class EnemyController : CharacterController
 {
     public float shootingTimer;
     public GameObject bulletPrefab;
@@ -37,17 +37,16 @@ public class EnemyController : CharacterController
         if (taunted)
             InTaunt();
         else
-            MovePattern(movementSpeed);
+            MovePattern(this, player);
     }
 
     /// <summary>
-    /// MovePattern of the current enemy
+    /// 
     /// </summary>
-    /// <param name="speed">How fast does it move</param>
-    private void MovePattern(float speed)
-    {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, movementSpeed * Time.deltaTime);
-    }
+    /// <param name="enemy"></param>
+    /// <param name="player"></param>
+    protected abstract void MovePattern(EnemyController enemy, PlayerController player);
+
 
     /// <summary>
     /// When the enemy is taunted. Follows the player.
