@@ -1,7 +1,4 @@
-﻿
-using UnityEngine;
-
-public abstract class EnemyMovePattern
+﻿public abstract class EnemyMovePattern
 {
     /// <summary>
     /// Whick move pattern does the enemy have

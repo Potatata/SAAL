@@ -32,6 +32,9 @@ public abstract class EnemyController : CharacterController
         Move();
     }
 
+    /// <summary>
+    /// The movement of the enemy.
+    /// </summary>
     public override void Move()
     {
         if (taunted)
@@ -41,10 +44,10 @@ public abstract class EnemyController : CharacterController
     }
 
     /// <summary>
-    /// 
+    /// The type of enemy pattern
     /// </summary>
-    /// <param name="enemy"></param>
-    /// <param name="player"></param>
+    /// <param name="enemy">This enemy.</param>
+    /// <param name="player">Where the player is at.</param>
     protected abstract void MovePattern(EnemyController enemy, PlayerController player);
 
 
