@@ -10,25 +10,25 @@ public class SceneController : MonoBehaviour
     Vector2 initialPlayerPosition = new Vector2(21, 26);
     int numberOfScenes = 4;
 
-    /// <summary>
-    /// Loads the  first scene when the game starts
-    /// </summary>
-    void Awake()
-    {
-        if (!gameStart)
-        {
-            anyManager = this;
+    ///// <summary>
+    ///// Loads the  first scene when the game starts
+    ///// </summary>
+    //void Awake()
+    //{
+    //    if (!gameStart)
+    //    {
+    //        anyManager = this;
 
-            //Loads the first scene
-            LoadScene(1);
-            //Sets the player and the player's initial position
-            player = FindObjectOfType<PlayerController>();
-            SetPlayerPosition(initialPlayerPosition);
-            //Set the gameStart bool to true
-            gameStart = true;
-        }
+    //        //Loads the first scene
+    //        LoadScene(1);
+    //        //Sets the player and the player's initial position
+    //        player = FindObjectOfType<PlayerController>();
+    //        SetPlayerPosition(initialPlayerPosition);
+    //        //Set the gameStart bool to true
+    //        gameStart = true;
+    //    }
 
-    }
+    //}
 
     /// <summary>
     /// Set the player position on the received values
