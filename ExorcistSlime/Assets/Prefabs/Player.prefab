@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 2010419192735377253}
   - component: {fileID: 2010419192735377251}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,7 +188,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 16
   dashTime: 0
-  health: 0
+  saltPrefab: {fileID: 3600700295964448795, guid: 983ff941974262946bd27c530b1c232e,
+    type: 3}
+  isdashing: 0
 --- !u!1 &2010419193507424199
 GameObject:
   m_ObjectHideFlags: 0

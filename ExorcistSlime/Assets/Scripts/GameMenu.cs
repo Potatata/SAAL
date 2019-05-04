@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
+    public int firstStage;
     public void ClickPlayButton()
     {
-        int currentScene = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentScene + 1);
+        SceneManager.LoadScene(firstStage);
     }
 
     public void ClickQuitButton()
