@@ -6,18 +6,23 @@ public class PlayerController : MonoBehaviour
 {
     //Constants
     private const float SPEED = 16f;
-    private const int DASH_TIME = 10 ;
+    private const int SALT_PARTICLES = 16 ;
     private const float DASH_SPEED = SPEED*3;
+    private const float DASH_TIME = 0.0001f;
+    private const int MANA_COMSUNPTION = 20;
+    private const int MANA = 60;
+    private const float RESTORING_TIME = 0.1f;
 
     // Movement configuration
     public float speed = SPEED;
-    public int dashTime = 0;
+    public int mana = MANA;
 
     //Fields
     private TopDownMovementController2D _controller;
 	private Vector3 _velocity;
     public GameObject saltPrefab;
-    public bool isdashing = false;
+    public bool isDashing = false;
+    public bool isRestoringMana = false;
 
     void Awake()
 	{
@@ -26,15 +31,31 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator MakeTrail()
     {
-        isdashing = true;
-        for (int i = 0; i < DASH_TIME; i++)
+        isDashing = true;
+        for (int i = 0; i < SALT_PARTICLES; i++)
         {
             LeaveTrail();
-            yield return new WaitForSeconds(0.007f);
+            yield return new WaitForSeconds(DASH_TIME);
 
         }
         speed = SPEED;
-        isdashing = false;
+        isDashing = false;
+    }
+
+    private void LeaveTrail()
+    {
+        Instantiate(saltPrefab, this.transform.position, this.transform.rotation);
+    }
+
+    IEnumerator RestoreMana()
+    {
+        isRestoringMana = true;
+        while(mana < MANA)
+        {
+            ++mana;
+            yield return new WaitForSeconds(RESTORING_TIME);
+        }
+        isRestoringMana = false;
     }
 
     void Dash()
@@ -42,27 +63,15 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") != 0)
         {
             //Player dash mechanic
-            if (Input.GetButtonDown("Fire1") && !isdashing)
+            if (Input.GetButtonDown("Fire1") && !isDashing && (mana > MANA_COMSUNPTION))
             {
-                dashTime = DASH_TIME;
                 speed = DASH_SPEED;
+                mana -= MANA_COMSUNPTION;
                 Debug.Log("Dashing!");
                 StartCoroutine(MakeTrail());
-            }
-            else
-            {
-             /*  if (dashTime <= 0) speed = SPEED;
-                else
-                {
-                    --dashTime;
-                    LeaveTrail();
-                }*/
+                if(!isRestoringMana) StartCoroutine(RestoreMana());
             }
         }
-    }
-
-    private void LeaveTrail() {
-        Instantiate(saltPrefab, this.transform.position, this.transform.rotation);
     }
 
     void Move()
