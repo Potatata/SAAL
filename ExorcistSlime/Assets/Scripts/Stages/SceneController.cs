@@ -36,7 +36,7 @@ public abstract class SceneController : MonoBehaviour
     public void LoadNextScene()
     {
         System.Random randomNumber = new System.Random();
-        int nextScene = randomNumber.Next(2, numberOfScenes + 2);
+        int nextScene = randomNumber.Next(3, numberOfScenes + 2);
         Debug.Log("New scene: " + (nextScene-1).ToString() + " Past scene: " + (currentScene-1).ToString());
         LoadScene(nextScene);
     }
