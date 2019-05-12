@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1360719429389144430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8009338016715685496}
   - component: {fileID: 8009338016715685497}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,8 +120,8 @@ GameObject:
   - component: {fileID: 8009338017226474222}
   - component: {fileID: 8009338017226474211}
   - component: {fileID: 4287172413829498669}
-  m_Layer: 0
-  m_Name: Enemy
+  m_Layer: 8
+  m_Name: _Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

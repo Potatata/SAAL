@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8866998661325471343}
   - component: {fileID: 8866998661325471342}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 8866998663044743924}
   - component: {fileID: 3410371333364434746}
   - component: {fileID: 2443398815476142673}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemySimpleShootsAtPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
