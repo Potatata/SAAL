@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +11,7 @@ public abstract class EnemyController : CharacterController
     protected Transform firePoint;
     protected PlayerController player;
 
-    public virtual void Awake()
+    public void SetupAwake()
     {
         bullets = new List<BulletType>() { };
         firePoint = transform.Find("FirePoint").transform;
@@ -21,13 +20,18 @@ public abstract class EnemyController : CharacterController
         movementSpeed = 1;
     }
 
+    public virtual void Awake()
+    {
+        SetupAwake();
+    }
+
     public void Start()
     {
         StartCoroutine(Shoot());
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         Move();
     }

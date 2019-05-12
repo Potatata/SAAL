@@ -318,7 +318,6 @@ namespace Prime31 {
                 //Take damage and check if he died
                 --health;
                 if (health <= 0) Died();
-                Debug.Log("Getting damage!");
             }
         }
 
