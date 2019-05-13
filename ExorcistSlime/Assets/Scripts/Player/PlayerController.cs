@@ -2,7 +2,7 @@
 using Prime31;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : CharacterController
 {
     //Constants
     private const float SPEED = 16f;
@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     private const float RESTORING_TIME = 0.1f;
 
     // Movement configuration
-    public float speed = SPEED;
     public int mana = MANA;
 
     //Fields
@@ -27,6 +26,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
 	{
 		_controller = GetComponent<TopDownMovementController2D>();
+        movementSpeed = SPEED;
     }
 
     IEnumerator MakeTrail()
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(DASH_TIME);
 
         }
-        speed = SPEED;
+        movementSpeed = SPEED;
         isDashing = false;
     }
 
@@ -65,22 +65,22 @@ public class PlayerController : MonoBehaviour
             //Player dash mechanic
             if (Input.GetButtonDown("Fire1") && !isDashing && (mana > MANA_COMSUNPTION))
             {
-                speed = DASH_SPEED;
+                movementSpeed = DASH_SPEED;
                 mana -= MANA_COMSUNPTION;
-                Debug.Log("Dashing!");
                 StartCoroutine(MakeTrail());
                 if(!isRestoringMana) StartCoroutine(RestoreMana());
             }
         }
     }
 
-    void Move()
+    public override void Move()
     {
         //Player movement
         _velocity = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
-        _controller.move(_velocity * Time.deltaTime * speed);
+        _controller.move(_velocity * Time.deltaTime * movementSpeed);
         // Grab our current _velocity to use as a base for all calculations
         _velocity = _controller.velocity;
+        health = _controller.health;
     }
 
     // The Update loop contains a very simple example of moving the character around

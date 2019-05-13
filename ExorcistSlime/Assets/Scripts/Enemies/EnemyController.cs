@@ -5,12 +5,16 @@ using UnityEngine;
 
 public abstract class EnemyController : CharacterController
 {
+    //Constants
+    private const float INVINCIBILITY_TIME = 5f;
+
     public float shootingTimer;
     public GameObject bulletPrefab;
     protected List<BulletType> bullets;
     public bool taunted;
     protected Transform firePoint;
     protected PlayerController player;
+    public bool isInvincible = false;
 
     public virtual void Awake()
     {
@@ -77,5 +81,36 @@ public abstract class EnemyController : CharacterController
             }
             yield return new WaitForSeconds(shootingTimer);
         }
+    }
+
+    /// <summary>
+    /// Detect if the enemy is hurt by salt
+    /// </summary>
+    /// <param name="objectHit"></param>
+    void OnTriggerEnter2D(Collider2D objectHit)
+    {
+        //If it hit a bullet
+        if (objectHit.gameObject.GetComponent<SaltController>() && !isInvincible)
+        {
+            //Take damage and check if he died
+            --health;
+            if (health <= 0) Died();
+            StartCoroutine(Invincibility());
+        }
+    }
+
+    /// <summary>
+    /// Destroy this game object
+    /// </summary>
+    void Died()
+    {
+        Destroy(gameObject);
+    }
+
+    private IEnumerator Invincibility()
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(INVINCIBILITY_TIME);
+        isInvincible = false;
     }
 }
