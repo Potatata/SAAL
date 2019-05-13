@@ -67,7 +67,6 @@ public class PlayerController : CharacterController
             {
                 movementSpeed = DASH_SPEED;
                 mana -= MANA_COMSUNPTION;
-                Debug.Log("Dashing!");
                 StartCoroutine(MakeTrail());
                 if(!isRestoringMana) StartCoroutine(RestoreMana());
             }
