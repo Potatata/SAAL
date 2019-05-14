@@ -1,13 +1,13 @@
 Win64
 PlayerPath?
-C:/Users/luisp/Downloads/Games/ExorcistSlime.exe
+C:/Users/Arven/Desktop/ExorcistSlime.exe
 SceneListBegin?
-Assets/Scenes/MainMenu.unity
-Assets/Scenes/Test.unity
 Assets/Scenes/StagesScenes/FirstStage.unity
 Assets/Scenes/StagesScenes/SecondStage.unity
 Assets/Scenes/StagesScenes/ThirdStage.unity
 Assets/Scenes/StagesScenes/FourthStage.unity
+Assets/Scenes/MainMenu.unity
+Assets/Scenes/Test.unity
 SceneListEnd?
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 01aa15e337e3a9c62f15153dfac6d589 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
