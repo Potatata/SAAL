@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using Assets.Scripts.MarkovChain;
 
 public abstract class SceneController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public abstract class SceneController : MonoBehaviour
     public GameObject playerRespawn;
     protected int numberOfScenes = 4;
     protected int currentScene;
+    
 
     public virtual void Awake()
     {
@@ -35,12 +37,12 @@ public abstract class SceneController : MonoBehaviour
     /// </summary>
     public void LoadNextScene()
     {
+        MarkovNextStage nextStageGenerator = new MarkovNextStage();
         System.Random randomNumber = new System.Random();
-        int nextScene = randomNumber.Next(3, numberOfScenes + 2);
-        Debug.Log("New scene: " + (nextScene-1).ToString() + " Past scene: " + (currentScene-1).ToString());
+        int nextScene = nextStageGenerator.getNextState(currentScene);
+        Debug.Log("New scene: " + (nextScene).ToString() + " Past scene: " + (currentScene).ToString());
         LoadScene(nextScene);
     }
-
     
 
     
