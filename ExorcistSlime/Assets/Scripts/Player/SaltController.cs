@@ -5,12 +5,25 @@ using UnityEngine;
 public class SaltController : MonoBehaviour
 {
     //Fields
-    public int lifeTime = 100;
+    public float lifeTime = 5f;
+    public int life = 1;
+
+    public void Start()
+    {
+        StartCoroutine(Exist());
+    }
+
+    private IEnumerator Exist()
+    {
+        while (true)
+        {
+            --life;
+            yield return new WaitForSeconds(lifeTime);
+        }
+    }
 
     void Update()
     {
-        --lifeTime;
-        Debug.Log(lifeTime);
-        if (lifeTime < 0) Destroy(gameObject);
+        if (life < 0) Destroy(gameObject);
     }
 }

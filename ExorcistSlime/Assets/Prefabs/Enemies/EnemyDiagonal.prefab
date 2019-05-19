@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2460789299775765203}
   - component: {fileID: 8538684369878843165}
   - component: {fileID: 5548602594062481469}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyDiagonal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,13 +94,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0b21156bd26efd47832b917c68999f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  movementSpeed: 0
+  health: 3
+  movementSpeed: 1
   healthText: {fileID: 0}
   shootingTimer: 0
   bulletPrefab: {fileID: 2577315237401998270, guid: 4fcb345ddff612d4ab5885b86ab2c89e,
     type: 3}
   taunted: 0
+  isInvincible: 0
 --- !u!1 &2460789301495531087
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2460789301495531080}
   - component: {fileID: 2460789301495531081}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6909269177548269918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

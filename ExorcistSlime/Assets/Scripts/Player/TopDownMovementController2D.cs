@@ -323,7 +323,7 @@ namespace Prime31 {
 
         void Died()
         {
-            Debug.Log("Dying!");
+            //Destroy(gameObject);
         }
 
         #endregion
