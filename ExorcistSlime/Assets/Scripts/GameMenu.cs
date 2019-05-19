@@ -13,7 +13,6 @@ public class GameMenu : MonoBehaviour
 
     public void ClickQuitButton()
     {
-        Debug.Log("Se cierra el juego");
         Application.Quit();
     }
 }

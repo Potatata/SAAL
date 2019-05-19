@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3338384604106391346}
   - component: {fileID: 8794872536259984124}
   - component: {fileID: 4545109365410030688}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: _Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3338384604685566889}
   - component: {fileID: 3338384604685566888}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6021469371363388607}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

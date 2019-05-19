@@ -8,7 +8,7 @@ public class StageWithEnemies : SceneController
     public override void Awake()
     {
         base.Awake();
-        enemyGenerationPoints = (EnemyGenerationPoint[])Object.FindObjectsOfType<EnemyGenerationPoint>();
+        enemyGenerationPoints = FindObjectsOfType<EnemyGenerationPoint>();
         foreach (EnemyGenerationPoint generationPoint in enemyGenerationPoints)
         {
             Instantiate(enemyPrefab, generationPoint.transform.position, generationPoint.transform.rotation);

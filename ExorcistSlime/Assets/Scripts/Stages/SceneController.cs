@@ -11,17 +11,29 @@ public abstract class SceneController : MonoBehaviour
     protected int numberOfScenes = 4;
     protected int currentScene;
     public UIComponent healthBar;
+    public Canvas canvas;
+    public Camera camera;
     
 
     public virtual void Awake()
     {
-        if(playerPrefab != null && playerRespawn != null)
+
+        if (playerPrefab != null && playerRespawn != null)
         {
             Instantiate(playerPrefab, playerRespawn.transform.position, playerRespawn.transform.rotation);
         }
 
         currentScene = SceneManager.GetActiveScene().buildIndex;
                 
+    }
+
+    public void Start()
+    {
+        canvas = GetComponentInChildren<Canvas>();
+        camera = Camera.main;
+        canvas.worldCamera = camera;
+        healthBar = gameObject.GetComponentInChildren<UIComponentHealthBar>();
+        healthBar.Hide();
     }
 
     /// <summary>
@@ -42,7 +54,5 @@ public abstract class SceneController : MonoBehaviour
         System.Random randomNumber = new System.Random();
         int nextScene = nextStageGenerator.getNextState(currentScene);
         LoadScene(nextScene);
-        healthBar = new UIComponentHealthBar();
-        healthBar.Show();
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1749393373718694734}
   - component: {fileID: 5485070866927931008}
   - component: {fileID: 8602432176600198676}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: EnemySides
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee36ac0b85d93be4fb43e6d0fa050f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
   movementSpeed: 1
   healthText: {fileID: 0}
   shootingTimer: 0
@@ -112,7 +111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1749393374212962261}
   - component: {fileID: 1749393374212962260}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7314907237725132995}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FirePoint
   m_TagString: FirePoint
   m_Icon: {fileID: 0}
