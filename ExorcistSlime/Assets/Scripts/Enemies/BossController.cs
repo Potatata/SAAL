@@ -4,23 +4,19 @@ public abstract class BossController : EnemyController
 {
     UIComponent healthBar;
 
-    public override void Awake()
+    public override void Start()
     {
-        SetupAwake();
-        healthBar = new UIComponentHealthBar();
+        base.Start();
+        healthBar = GameObject.FindGameObjectWithTag("BossHealthBar").GetComponent<UIComponentHealthBar>();
         healthBar.Show();
     }
 
-    // Update is called once per frame
-    public override void Update()
+    protected override void TakeDamage()
     {
-        Move();
-    }
-
-    void OnTriggerEnter2D(Collider2D objectHit)
-    {
-        UpdateOnHit(objectHit);
+        base.TakeDamage();
         //Updates the health bar when hit
         healthBar.UpdateUI(health);
+        Debug.Log(health.currentHealth);
+        Debug.Log(health.totalHealth);
     }
 }

@@ -4,9 +4,9 @@
 public class Health
 {
     //The current health
-    public int currentHealth {get; set;}
+    public float currentHealth {get; set;}
 
     //The total health
-    public int totalHealth {get; set;}
+    public float totalHealth {get; set;}
 }
 

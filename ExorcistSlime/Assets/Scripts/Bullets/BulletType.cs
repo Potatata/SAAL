@@ -12,12 +12,12 @@ public class BulletSetDirection : BulletType
     /// <summary>
     /// Up direction of the bullet
     /// </summary>
-    public int Up { get; set; }
+    public float Up { get; set; }
 
     /// <summary>
     /// Right direction of the bullet
     /// </summary>
-    public int Right { get; set; }
+    public float Right { get; set; }
 }
 
 /// <summary>
@@ -28,5 +28,5 @@ public class BulletSpeed : BulletType
     /// <summary>
     /// Speed of the bullet
     /// </summary>
-    public int Speed { get; set; }
+    public float Speed { get; set; }
 }

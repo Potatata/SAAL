@@ -8,6 +8,8 @@ TagManager:
   - TriggerNextStage
   - Wall
   - BossBar
+  - BossHealthBar
+  - Salt
   layers:
   - Default
   - TransparentFX

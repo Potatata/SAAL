@@ -9,7 +9,7 @@ public class UIComponentHealthBar : UIComponent
     {
         //Sets the health bar in full
         ScaleHealthBar(new Health { currentHealth = 1, totalHealth = 1 });
-        healthBar = GameObject.FindGameObjectsWithTag("BossBar")[0];
+        healthBar = GameObject.FindGameObjectWithTag("BossBar");
         Hide();
     }
 
@@ -24,7 +24,7 @@ public class UIComponentHealthBar : UIComponent
     /// <summary>
     /// Hides or shows all child renders
     /// </summary>
-    /// <param name="newStatus"></param>
+    /// <param name="newStatus">The new status for all the children</param>
     private void ChangeChildRenders(bool newStatus)
     {
         Renderer[] renderers = gameObject.GetComponentsInChildren<Renderer>();

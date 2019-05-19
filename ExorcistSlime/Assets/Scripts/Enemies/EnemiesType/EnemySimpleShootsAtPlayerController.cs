@@ -7,6 +7,8 @@ public class EnemySimpleShootsAtPlayerController : EnemyController
     {
         base.Awake();
         shootingTimer = 1.5f;
+        health.totalHealth = health.currentHealth = 1f;
+
         //Starts the bullet speed type.
         bullets.Add(new BulletSpeed() { Speed = 2});
     }
