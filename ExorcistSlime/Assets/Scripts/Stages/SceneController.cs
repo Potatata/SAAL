@@ -10,6 +10,7 @@ public abstract class SceneController : MonoBehaviour
     public GameObject playerRespawn;
     protected int numberOfScenes = 4;
     protected int currentScene;
+    public UIComponent healthBar;
     
 
     public virtual void Awake()
@@ -40,10 +41,8 @@ public abstract class SceneController : MonoBehaviour
         MarkovNextStage nextStageGenerator = new MarkovNextStage();
         System.Random randomNumber = new System.Random();
         int nextScene = nextStageGenerator.getNextState(currentScene);
-        Debug.Log("New scene: " + (nextScene).ToString() + " Past scene: " + (currentScene).ToString());
         LoadScene(nextScene);
+        healthBar = new UIComponentHealthBar();
+        healthBar.Show();
     }
-    
-
-    
 }

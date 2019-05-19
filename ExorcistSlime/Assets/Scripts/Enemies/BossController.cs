@@ -19,6 +19,8 @@ public abstract class BossController : EnemyController
 
     void OnTriggerEnter2D(Collider2D objectHit)
     {
-        //healthBar.Update(health);
+        UpdateOnHit(objectHit);
+        //Updates the health bar when hit
+        healthBar.UpdateUI(health);
     }
 }

@@ -19,5 +19,5 @@ public abstract class UIComponent : MonoBehaviour
     /// Updates the UIComponent
     /// </summary>
     /// <param name="health">The health to display</param>
-    public abstract void Update(Health health);
+    public abstract void UpdateUI(Health health);
 }

@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.SceneManagement;
 
 public class NextStageTrigger : MonoBehaviour
 {
@@ -19,7 +17,6 @@ public class NextStageTrigger : MonoBehaviour
         if (objectHit.gameObject.GetComponent<PlayerController>())
         {
             //Loads the next stage and unload the old scene
-            Debug.Log("Scene loaded!");
             parentSceneController.LoadNextScene();
         }
     }

@@ -90,15 +90,25 @@ public abstract class EnemyController : CharacterController
     /// <summary>
     /// Detect if the enemy is hurt by salt
     /// </summary>
-    /// <param name="objectHit"></param>
+    /// <param name="objectHit">Which object was hit</param>
     void OnTriggerEnter2D(Collider2D objectHit)
+    {
+        UpdateOnHit(objectHit);
+    }
+
+    /// <summary>
+    /// Updates on the hit of salt.
+    /// </summary>
+    /// <param name="objectHit">Which object was hit</param>
+    public void UpdateOnHit(Collider2D objectHit)
     {
         //If it hit a bullet
         if (objectHit.gameObject.GetComponent<SaltController>() && !isInvincible)
         {
             //Take damage and check if he died
-            --health;
-            if (health <= 0) Died();
+            --health.currentHealth;
+            if (health.currentHealth <= 0)
+                Died();
             StartCoroutine(Invincibility());
         }
     }
@@ -108,7 +118,7 @@ public abstract class EnemyController : CharacterController
     /// </summary>
     void Died()
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 
     private IEnumerator Invincibility()

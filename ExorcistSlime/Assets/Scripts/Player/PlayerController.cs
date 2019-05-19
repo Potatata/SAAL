@@ -80,7 +80,8 @@ public class PlayerController : CharacterController
         _controller.move(_velocity * Time.deltaTime * movementSpeed);
         // Grab our current _velocity to use as a base for all calculations
         _velocity = _controller.velocity;
-        health = _controller.health;
+        //@TODO FIX LUIS        
+        //health = _controller.health;
     }
 
     // The Update loop contains a very simple example of moving the character around
