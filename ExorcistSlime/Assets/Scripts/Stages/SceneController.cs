@@ -11,9 +11,7 @@ public abstract class SceneController : MonoBehaviour
     protected int numberOfScenes = 4;
     protected int currentScene;
     public UIComponent healthBar;
-    public Canvas canvas;
-    public Camera camera;
-    
+    public Canvas canvas;    
 
     public virtual void Awake()
     {
@@ -30,8 +28,7 @@ public abstract class SceneController : MonoBehaviour
     public void Start()
     {
         canvas = GetComponentInChildren<Canvas>();
-        camera = Camera.main;
-        canvas.worldCamera = camera;
+        canvas.worldCamera = Camera.main;
         healthBar = gameObject.GetComponentInChildren<UIComponentHealthBar>();
         healthBar.Hide();
     }
