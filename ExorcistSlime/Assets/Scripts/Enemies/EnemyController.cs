@@ -14,6 +14,7 @@ public abstract class EnemyController : CharacterController
     protected Transform firePoint;
     protected PlayerController player;
     public bool isInvincible;
+    private SceneController sceneController; 
 
     public virtual void Awake()
     {
@@ -21,6 +22,7 @@ public abstract class EnemyController : CharacterController
         bullets = new List<BulletType>() { };
         firePoint = transform.Find("FirePoint").transform;
         player = FindObjectOfType<PlayerController>();
+        sceneController = FindObjectOfType<SceneController>();
         taunted = isInvincible = false;
         movementSpeed = 1;
     }
@@ -92,8 +94,21 @@ public abstract class EnemyController : CharacterController
         //If it hit a bullet
         if (objectHit.gameObject.GetComponent<SaltController>() && !isInvincible)
         {
+            Debug.Log("Colisión SAL");
             TakeDamage();
             StartCoroutine(Invincibility());
+        }
+        else
+        {
+            if (!objectHit.gameObject.GetComponent<BulletShootsAtPlayerController>() && !objectHit.gameObject.GetComponent<BulletWithSetDirectionController>())
+            {
+                Debug.Log(objectHit.gameObject);
+                if (isInvincible)
+                {
+                    Debug.Log(":v");
+                }
+            }
+           
         }
     }
 
@@ -113,6 +128,10 @@ public abstract class EnemyController : CharacterController
     /// </summary>
     protected void Died()
     {
+        if(sceneController != null)
+        {
+            sceneController.EnemyDies();
+        }
         Destroy(gameObject);
     }
 

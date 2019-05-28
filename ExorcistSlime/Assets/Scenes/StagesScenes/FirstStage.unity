@@ -258,7 +258,6 @@ MonoBehaviour:
   playerRespawn: {fileID: 128729124}
   healthBar: {fileID: 0}
   canvas: {fileID: 0}
-  camera: {fileID: 0}
 --- !u!1 &1375337015
 GameObject:
   m_ObjectHideFlags: 0

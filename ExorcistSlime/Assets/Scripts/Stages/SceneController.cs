@@ -11,7 +11,9 @@ public abstract class SceneController : MonoBehaviour
     protected int numberOfScenes = 4;
     protected int currentScene;
     public UIComponent healthBar;
-    public Canvas canvas;    
+    public Canvas canvas;
+    protected bool playerCanNextStage;
+    protected int enemiesOnStage;
 
     public virtual void Awake()
     {
@@ -22,6 +24,8 @@ public abstract class SceneController : MonoBehaviour
         }
 
         currentScene = SceneManager.GetActiveScene().buildIndex;
+
+        playerCanNextStage = false;
                 
     }
 
@@ -33,13 +37,29 @@ public abstract class SceneController : MonoBehaviour
         healthBar.Hide();
     }
 
+    public virtual void Update(){}
+
+
+    /// <summary>
+    /// Method to decrease the enemies remaining on the stage
+    /// </summary>
+    public void EnemyDies()
+    {
+        enemiesOnStage--;
+        Debug.Log(enemiesOnStage);
+    }
+
     /// <summary>
     /// Method to load a scene
     /// </summary>
     /// <param name="sceneNumber">An int with the scene number to load</param>
     private void LoadScene(int sceneNumber)
     {
-        SceneManager.LoadScene(sceneNumber);
+        if (playerCanNextStage)
+        {
+            Debug.Log("NextStage");
+            SceneManager.LoadScene(sceneNumber);
+        }
     }
 
     /// <summary>

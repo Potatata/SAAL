@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 488980500455870841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8866998661325471343}
   - component: {fileID: 8866998661325471342}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 8866998663044743924}
   - component: {fileID: 3410371333364434746}
   - component: {fileID: 8858335129639510322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemySimpleShootsAtPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 1
-  healthText: {fileID: 0}
   shootingTimer: 0
   bulletPrefab: {fileID: 3456733128906575650, guid: a71299d5a8e2ddd48b73e1972c00c2c7,
     type: 3}

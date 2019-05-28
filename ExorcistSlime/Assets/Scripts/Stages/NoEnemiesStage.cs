@@ -4,4 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class NoEnemiesStage : SceneController { }
+public class NoEnemiesStage : SceneController {
+
+    public override void Awake()
+    {
+        base.Awake();
+        playerCanNextStage = true;
+    }
+
+}
