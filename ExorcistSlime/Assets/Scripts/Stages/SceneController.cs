@@ -46,7 +46,6 @@ public abstract class SceneController : MonoBehaviour
     public void EnemyDies()
     {
         enemiesOnStage--;
-        Debug.Log(enemiesOnStage);
     }
 
     /// <summary>
@@ -57,7 +56,6 @@ public abstract class SceneController : MonoBehaviour
     {
         if (playerCanNextStage)
         {
-            Debug.Log("NextStage");
             SceneManager.LoadScene(sceneNumber);
         }
     }

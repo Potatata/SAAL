@@ -33,7 +33,11 @@ public class StageWithEnemies : SceneController
     /// </summary>
     private void OpenNextStageDoor()
     {
-        Destroy(nextStageDoor);
+        NextStageDoor door = FindObjectOfType<NextStageDoor>();
+        if(door != null)
+        {
+            door.DestroyDoor();
+        }
         playerCanNextStage = true;
     }
 }

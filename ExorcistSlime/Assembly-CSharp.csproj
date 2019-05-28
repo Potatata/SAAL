@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\NextStageDoor.cs" />
     <Compile Include="Assets\Scripts\Bullets\BulletController.cs" />
     <Compile Include="Assets\Scripts\Bullets\BulletShootsAtPlayerController.cs" />
     <Compile Include="Assets\Scripts\Bullets\BulletType.cs" />
