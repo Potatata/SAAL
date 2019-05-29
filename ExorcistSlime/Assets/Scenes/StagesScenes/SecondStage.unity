@@ -370,7 +370,13 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   canvas: {fileID: 0}
   nextStageDoor: {fileID: 313673602}
-  enemyPrefab: {fileID: 8866998663044743925, guid: d67324202d4d17e418bd0eb64dfc7493,
+  enemyPrefabType0: {fileID: 8866998663044743925, guid: d67324202d4d17e418bd0eb64dfc7493,
+    type: 3}
+  enemyPrefabType1: {fileID: 2460789299775765202, guid: b6eff2645654ee64299bedc4febc5ad7,
+    type: 3}
+  enemyPrefabType2: {fileID: 1749393373718694735, guid: b8f347bd7196ec34798b359203f7e530,
+    type: 3}
+  enemyPrefabType3: {fileID: 5757030790045684126, guid: bc1f0641e6ef954478f0633d39cd5b11,
     type: 3}
 --- !u!1 &825070135
 GameObject:

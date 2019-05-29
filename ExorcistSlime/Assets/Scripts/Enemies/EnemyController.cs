@@ -94,21 +94,8 @@ public abstract class EnemyController : CharacterController
         //If it hit a bullet
         if (objectHit.gameObject.GetComponent<SaltController>() && !isInvincible)
         {
-            Debug.Log("Colisión SAL");
             TakeDamage();
             StartCoroutine(Invincibility());
-        }
-        else
-        {
-            if (!objectHit.gameObject.GetComponent<BulletShootsAtPlayerController>() && !objectHit.gameObject.GetComponent<BulletWithSetDirectionController>())
-            {
-                Debug.Log(objectHit.gameObject);
-                if (isInvincible)
-                {
-                    Debug.Log(":v");
-                }
-            }
-           
         }
     }
 

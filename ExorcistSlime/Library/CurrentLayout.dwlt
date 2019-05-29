@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 54
+  controlID: 110
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 55
+  controlID: 111
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 56
+  controlID: 112
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,8 +210,8 @@ MonoBehaviour:
     y: 0
     width: 1150
     height: 573
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 224}
+  m_MaxSize: {x: 4004, y: 4024}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -265,8 +265,8 @@ MonoBehaviour:
     y: 0
     width: 391
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 74}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -413,9 +413,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: ec300000
       m_LastClickedID: 0
-      m_ExpandedIDs: ccfbffff
+      m_ExpandedIDs: c8bafdff0ad8fdffb6effdff1cf0fdffd008feff5009feffa409feff3415fefff015feff5816feff8426feff9227fefff827feffaa2dfeffb42dfefff42dfeff002ffeff782ffeff4430feff0e31feff3443feffccbbfefffcbcfeff1cbefeff56bffeff9cbffeff8078ffff9478ffff0a7affff727affffc87affff1e7bffff467bffff4e7bffff547cffff687cffffda7dffff3e7effff907effffe27effff067fffff0a7fffff7ef1ffffc23c0000c64f00007e510000a25300004a55000072550000445800006c5800008a580000c0580000de5800000e5a00002c5a0000ee5c0000125d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -470,9 +470,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 31.390371, y: -7.856446, z: -10.140625}
+    m_Target: {x: 21.267368, y: -3.2510152, z: -10.615059}
     speed: 2
-    m_Value: {x: 31.390371, y: -7.856446, z: -10.140625}
+    m_Value: {x: 21.267368, y: -3.2510152, z: -10.615059}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -504,9 +504,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 36.31343
+    m_Target: 78.19604
     speed: 2
-    m_Value: 36.31343
+    m_Value: 78.19604
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -582,20 +582,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scenes/StagesScenes
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scenes/StagesScenes
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\Arven\Desktop\SAL\ExorcistSlime
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 78270000
-    m_LastClickedID: 10104
-    m_ExpandedIDs: 00000000582600001427000042270000602700007827000000ca9a3b
+    scrollPos: {x: 0, y: 131}
+    m_SelectedIDs: 3e310000
+    m_LastClickedID: 12606
+    m_ExpandedIDs: 00000000d02f00006e30000090300000a2300000b63000000031000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -623,7 +623,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005826000014270000422700006027000078270000
+    m_ExpandedIDs: 00000000d02f00006e30000090300000a2300000b6300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -650,7 +650,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000a6270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

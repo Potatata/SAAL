@@ -5,19 +5,33 @@ using Assets.Scripts.MarkovChain;
 
 public abstract class SceneController : MonoBehaviour
 {
-    
+    //Scenes config const
+    protected const int scenesAfterFirtsStage = 1;
+    protected const int numberOfScenes = 4;
+
+
     public GameObject playerPrefab;
     public GameObject playerRespawn;
-    protected int numberOfScenes = 4;
     protected int currentScene;
     public UIComponent healthBar;
     public Canvas canvas;
     protected bool playerCanNextStage;
     protected int enemiesOnStage;
 
+    //Enemy prefabs
+    public GameObject enemyPrefabType0;
+    public GameObject enemyPrefabType1;
+    public GameObject enemyPrefabType2;
+    public GameObject enemyPrefabDemonLord;
+
+    //Enemy Markov generator
+    private MarkovEnemyGeneration enemyTypeGenerator;
+
+
+
     public virtual void Awake()
     {
-
+        //Search for the player respawn at the scene
         if (playerPrefab != null && playerRespawn != null)
         {
             Instantiate(playerPrefab, playerRespawn.transform.position, playerRespawn.transform.rotation);
@@ -26,7 +40,10 @@ public abstract class SceneController : MonoBehaviour
         currentScene = SceneManager.GetActiveScene().buildIndex;
 
         playerCanNextStage = false;
-                
+
+
+        enemyTypeGenerator = new MarkovEnemyGeneration();
+
     }
 
     public void Start()
@@ -67,7 +84,29 @@ public abstract class SceneController : MonoBehaviour
     {
         MarkovNextStage nextStageGenerator = new MarkovNextStage();
         System.Random randomNumber = new System.Random();
-        int nextScene = nextStageGenerator.getNextState(currentScene);
-        LoadScene(nextScene);
+        int nextScene = nextStageGenerator.getNextState(currentScene - scenesAfterFirtsStage);
+        LoadScene(nextScene + scenesAfterFirtsStage);
+    }
+
+    protected void GenerateEnemy(EnemyGenerationPoint generationPoint)
+    {
+        int enemyType = enemyTypeGenerator.getNextState(currentScene - scenesAfterFirtsStage);
+        switch (enemyType)
+        {
+            case 0:
+                Instantiate(enemyPrefabType0, generationPoint.transform.position, generationPoint.transform.rotation);
+                break;
+            case 1:
+                Instantiate(enemyPrefabType1, generationPoint.transform.position, generationPoint.transform.rotation);
+                break;
+            case 2:
+                Instantiate(enemyPrefabType2, generationPoint.transform.position, generationPoint.transform.rotation);
+                break;
+            case 3:
+                Instantiate(enemyPrefabDemonLord, generationPoint.transform.position, generationPoint.transform.rotation);
+                break;
+            default:
+                break;
+        }
     }
 }

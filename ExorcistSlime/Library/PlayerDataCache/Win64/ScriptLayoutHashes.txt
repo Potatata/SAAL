@@ -2,11 +2,11 @@ Win64
 PlayerPath?
 C:/Users/Arven/Desktop/ExorcistSlime.exe
 SceneListBegin?
+Assets/Scenes/MainMenu.unity
 Assets/Scenes/StagesScenes/FirstStage.unity
 Assets/Scenes/StagesScenes/SecondStage.unity
 Assets/Scenes/StagesScenes/ThirdStage.unity
 Assets/Scenes/StagesScenes/FourthStage.unity
-Assets/Scenes/MainMenu.unity
 Assets/Scenes/Test.unity
 SceneListEnd?
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
@@ -129,6 +129,7 @@ b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 8e7fe12e3d9b549ca851d7ca30eca079 Assembly-CSharp.dll:.EnemySimpleShootsAtPlayerController
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.BulletShootsAtPlayerController
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.NextStageDoor
 e6ae40841db498b6e673877ac45ad208 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 1dcb82730d983b77cec736c6ef19f814 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -148,7 +149,7 @@ aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e51c09a4cc447f11db225afcd8e3e490 Unity.TextMeshPro.dll:TMPro.TMP_Settings
 edfadbb14d6b4a9432d271cf4d639ead Assembly-CSharp.dll:.PlayerController
 8e7fe12e3d9b549ca851d7ca30eca079 Assembly-CSharp.dll:.BossEnemyCirclesController
-3dfa748d807296dd3a040f42acb31c2b Assembly-CSharp.dll:.StageWithEnemies
+f2b6fdca43c4803129b2bfb8069c0747 Assembly-CSharp.dll:.StageWithEnemies
 cf96e5f7b3d069bab453925bd41be04e UnityEngine.TestRunner.dll:UnityEngine.TestTools.EnumerableSetUpTearDownCommandState
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 259d013faac28e8ba0aa2a7542273735 UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
@@ -175,4 +176,4 @@ db37d350c6b60e00c921daee20179923 Assembly-CSharp.dll:.NoEnemiesStage
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
-bea62dd77de5f73c03aae4630bfe92a3 Assembly-CSharp.dll:.GameMenu
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.GameMenu
