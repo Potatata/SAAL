@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - FirePoint
+  - TriggerNextStage
+  - Wall
+  - BossBar
+  - BossHealthBar
+  - Salt
   layers:
   - Default
   - TransparentFX

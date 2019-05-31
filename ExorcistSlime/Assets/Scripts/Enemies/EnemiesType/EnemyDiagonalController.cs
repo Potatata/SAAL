@@ -7,6 +7,8 @@ public class EnemyDiagonalController : EnemyController
     {
         base.Awake();
         shootingTimer = 2;
+        health.totalHealth = health.currentHealth = 1f;
+
         //Starts all the bullets
         bullets.Add(new BulletSetDirection() { Up = 2, Right = 2 });
         bullets.Add(new BulletSetDirection() { Up = -2, Right = -2 });

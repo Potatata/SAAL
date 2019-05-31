@@ -8,20 +8,19 @@ namespace Assets.Scripts.MarkovChain
 {
     public class MarkovChain
     {
-        public int stages;
+        public int states;
         public double[,] markovProbabilities;
+        Random randomNumber = new Random();
 
-        public int getNextState(int currentStateIndex)
+        public int getNextState(int currentStageIndex)
         {
-            Random randomNumber = new Random();
-
             double randomValue = randomNumber.NextDouble();
 
             double sum = 0;
 
-            for(int columnIterator = 0; columnIterator < stages; columnIterator++)
+            for(int columnIterator = 0; columnIterator < states; columnIterator++)
             {
-                sum += markovProbabilities[currentStateIndex, columnIterator];
+                sum += markovProbabilities[currentStageIndex, columnIterator];
                 if (randomValue <= sum)
                     return columnIterator;
             }

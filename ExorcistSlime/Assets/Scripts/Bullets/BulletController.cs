@@ -24,8 +24,7 @@ public abstract class BulletController : MonoBehaviour
     /// <param name="objectHit">What was hit.</param>
     void OnTriggerEnter2D(Collider2D objectHit)
     {
-
-        if (!objectHit.gameObject.GetComponent<EnemyController>() && !objectHit.gameObject.GetComponent<BulletController>())
+        if (!objectHit.gameObject.GetComponent<EnemyController>() && !objectHit.gameObject.GetComponent<BulletController>() && !objectHit.gameObject.GetComponent<BossController>())
         {
             Destroy(gameObject);
         }

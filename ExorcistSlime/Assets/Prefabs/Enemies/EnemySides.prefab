@@ -94,9 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee36ac0b85d93be4fb43e6d0fa050f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
   movementSpeed: 1
-  healthText: {fileID: 0}
   shootingTimer: 0
   bulletPrefab: {fileID: 2577315237401998270, guid: 4fcb345ddff612d4ab5885b86ab2c89e,
     type: 3}

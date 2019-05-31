@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,24 +13,27 @@ public abstract class EnemyController : CharacterController
     public bool taunted;
     protected Transform firePoint;
     protected PlayerController player;
-    public bool isInvincible = false;
+    public bool isInvincible;
+    private SceneController sceneController; 
 
     public virtual void Awake()
     {
+        health = new Health();
         bullets = new List<BulletType>() { };
         firePoint = transform.Find("FirePoint").transform;
         player = FindObjectOfType<PlayerController>();
-        taunted = false;
+        sceneController = FindObjectOfType<SceneController>();
+        taunted = isInvincible = false;
         movementSpeed = 1;
     }
 
-    public void Start()
+    public virtual void Start()
     {
         StartCoroutine(Shoot());
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         Move();
     }
@@ -67,7 +69,7 @@ public abstract class EnemyController : CharacterController
     /// Shoots at the enemy
     /// </summary>
     /// <returns>IEnumerator for the Coroutine</returns>
-    private IEnumerator Shoot()
+    protected IEnumerator Shoot()
     {
         while (true)
         {
@@ -86,28 +88,41 @@ public abstract class EnemyController : CharacterController
     /// <summary>
     /// Detect if the enemy is hurt by salt
     /// </summary>
-    /// <param name="objectHit"></param>
+    /// <param name="objectHit">Which object was hit</param>
     void OnTriggerEnter2D(Collider2D objectHit)
     {
         //If it hit a bullet
         if (objectHit.gameObject.GetComponent<SaltController>() && !isInvincible)
         {
-            //Take damage and check if he died
-            --health;
-            if (health <= 0) Died();
+            TakeDamage();
             StartCoroutine(Invincibility());
         }
     }
 
     /// <summary>
+    /// Takes damage from hit
+    /// </summary>
+    protected virtual void TakeDamage()
+    {
+        //Take damage and check if he died
+        --health.currentHealth;
+        if (health.currentHealth <= 0)
+            Died();
+    }
+
+    /// <summary>
     /// Destroy this game object
     /// </summary>
-    void Died()
+    protected void Died()
     {
+        if(sceneController != null)
+        {
+            sceneController.EnemyDies();
+        }
         Destroy(gameObject);
     }
 
-    private IEnumerator Invincibility()
+    protected IEnumerator Invincibility()
     {
         isInvincible = true;
         yield return new WaitForSeconds(INVINCIBILITY_TIME);
