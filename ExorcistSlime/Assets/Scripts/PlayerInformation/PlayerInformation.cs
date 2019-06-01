@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInformation
 {
-    private const float initialHealth = 50;
+    public const int initialHealth = 5;
 
     public static PlayerInformation instance;
 
@@ -19,7 +19,7 @@ public class PlayerInformation
 
     public PlayerInformation() { }
 
-    public float health = initialHealth;
+    public int health = initialHealth;
 
     public void DecreasePlayerHealth()
     {

@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections.Generic;
+using Assets.Scripts.UIComponents;
 
 namespace Prime31 {
 
     [RequireComponent( typeof( CircleCollider2D ), typeof( Rigidbody2D ) )]
     public class TopDownMovementController2D : MonoBehaviour
     {
-	    #region internal types
+        #region internal types
 
-	    struct CharacterRaycastOrigins
+        struct CharacterRaycastOrigins
 	    {
 		    public Vector3 topLeft;
 		    public Vector3 bottomRight;
@@ -91,38 +92,41 @@ namespace Prime31 {
 
 	    const float kSkinWidthFloatFudgeFactor = 0.001f;
 
-        public int health = 3;
-
-	    #endregion
-
-
-	    /// <summary>
+        /// <summary>
 	    /// holder for our raycast origin corners (TR, TL, BR, BL)
 	    /// </summary>
 	    CharacterRaycastOrigins _raycastOrigins;
 
-	    /// <summary>
-	    /// stores our raycast hit during movement
-	    /// </summary>
-	    RaycastHit2D _raycastHit;
+        /// <summary>
+        /// stores our raycast hit during movement
+        /// </summary>
+        RaycastHit2D _raycastHit;
 
-	    /// <summary>
-	    /// stores any raycast hits that occur this frame. we have to store them in case we get a hit moving
-	    /// horizontally and vertically so that we can send the events after all collision state is set
-	    /// </summary>
-	    List<RaycastHit2D> _raycastHitsThisFrame = new List<RaycastHit2D>( 2 );
+        /// <summary>
+        /// stores any raycast hits that occur this frame. we have to store them in case we get a hit moving
+        /// horizontally and vertically so that we can send the events after all collision state is set
+        /// </summary>
+        List<RaycastHit2D> _raycastHitsThisFrame = new List<RaycastHit2D>(2);
 
-	    // horizontal/vertical movement data
-	    float _verticalDistanceBetweenRays;
-	    float _horizontalDistanceBetweenRays;
+        // horizontal/vertical movement data
+        float _verticalDistanceBetweenRays;
+        float _horizontalDistanceBetweenRays;
+
+        UIComponentPlayerHearts playerHeartsArray;
+
+        #endregion
 
 
-	    #region Monobehaviour
+        #region Monobehaviour
 
-	    void Awake()
+        void Awake()
 	    {
-		    // cache some components
-		    transform = GetComponent<Transform>();
+
+            playerHeartsArray = GameObject.FindGameObjectWithTag("PlayerHeartsArray").GetComponent<UIComponentPlayerHearts>();
+            playerHeartsArray.Show();
+
+            // cache some components
+            transform = GetComponent<Transform>();
             circleCollider = GetComponent<CircleCollider2D>();
 		    rigidBody2D = GetComponent<Rigidbody2D>();
 
@@ -317,7 +321,10 @@ namespace Prime31 {
             {
                 //Take damage and check if he died
                 PlayerInformation.GetInstance().DecreasePlayerHealth();
-                
+
+                //Update UI
+                playerHeartsArray.UpdateUIPlayer(PlayerInformation.GetInstance().health);
+
                 //--health;
                 if (PlayerInformation.GetInstance().health <= 0) Died();
             }
@@ -330,7 +337,6 @@ namespace Prime31 {
             {
                 sceneController.ShowGameOverScene();
             }
-            //Destroy(gameObject);
         }
 
         #endregion

@@ -44192,7 +44192,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -44615,15 +44615,14 @@ MonoBehaviour:
   playerRespawn: {fileID: 789917038}
   healthBar: {fileID: 0}
   canvas: {fileID: 0}
-  nextStageDoor: {fileID: 1301484436}
   enemyPrefabType0: {fileID: 8866998663044743925, guid: d67324202d4d17e418bd0eb64dfc7493,
     type: 3}
   enemyPrefabType1: {fileID: 2460789299775765202, guid: b6eff2645654ee64299bedc4febc5ad7,
     type: 3}
   enemyPrefabType2: {fileID: 1749393373718694735, guid: b8f347bd7196ec34798b359203f7e530,
     type: 3}
-  enemyPrefabType3: {fileID: 5757030790045684126, guid: bc1f0641e6ef954478f0633d39cd5b11,
-    type: 3}
+  enemyPrefabDemonLord: {fileID: 0}
+  nextStageDoor: {fileID: 1301484436}
 --- !u!1001 &1164018609
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -173,7 +173,7 @@ MonoBehaviour:
     m_Bits: 256
   totalHorizontalRays: 20
   totalVerticalRays: 20
-  health: 3
+  health: 5
 --- !u!114 &2010419192735377251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,11 +186,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b78936a7d0d8424dab553ab90e25af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 16
-  dashTime: 0
+  movementSpeed: 0
+  mana: 60
   saltPrefab: {fileID: 3600700295964448795, guid: 983ff941974262946bd27c530b1c232e,
     type: 3}
-  isdashing: 0
+  isDashing: 0
+  isRestoringMana: 0
 --- !u!1 &2010419193507424199
 GameObject:
   m_ObjectHideFlags: 0
