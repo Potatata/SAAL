@@ -12,6 +12,8 @@ public class PlayerController : CharacterController
     private const int MANA_COMSUNPTION = 20;
     private const int MANA = 60;
     private const float RESTORING_TIME = 0.1f;
+    private const float TAUNTING_TIME = 20f;
+    public const float DISTANCE_TILL_PLAYER = 10;
 
     // Movement configuration
     public int mana = MANA;
@@ -22,6 +24,7 @@ public class PlayerController : CharacterController
     public GameObject saltPrefab;
     public bool isDashing = false;
     public bool isRestoringMana = false;
+    public bool isTaunting = false;
     UIComponent playerStaminaBar;
 
     void Awake()
@@ -65,6 +68,30 @@ public class PlayerController : CharacterController
         isRestoringMana = false;
     }
 
+    IEnumerator MakeTaunt()
+    {
+        EnemyController[] nearbyEnemies = FindObjectsOfType<EnemyController>();
+        if (!(nearbyEnemies.Length == 0))
+        {
+            foreach (EnemyController enemy in nearbyEnemies) {
+                if((Vector2.Distance(enemy.gameObject.transform.position, this.gameObject.transform.position)) <= DISTANCE_TILL_PLAYER * 3)
+                {
+                    enemy.taunted = true;
+                }
+            }
+            isTaunting = true;
+            Debug.Log("Taunting!");
+            yield return new WaitForSeconds(TAUNTING_TIME);
+            Debug.Log("Stop taunting!");
+            foreach (EnemyController enemy in nearbyEnemies)
+            {
+                enemy.taunted = false;
+            }
+            isTaunting = false;
+        }
+ 
+    }
+
     void Dash()
     {
         if (Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") != 0)
@@ -82,6 +109,15 @@ public class PlayerController : CharacterController
         }
     }
 
+    void Taunt()
+    {
+        //Player taunt mechanic
+        if (Input.GetButtonDown("Fire2") && !isTaunting)
+        {
+            StartCoroutine(MakeTaunt());
+        }
+    }
+
     public override void Move()
     {
         //Player movement
@@ -94,6 +130,7 @@ public class PlayerController : CharacterController
     // The Update loop contains a very simple example of moving the character around
     void Update()
     {
+        Taunt();
         Dash();
         Move();
     }
