@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/WinOrLose/GameOver.unity
+- path: Assets/Scenes/StagesScenes/BossFigthScene.unity
   isLoaded: 1
   isActive: 1
