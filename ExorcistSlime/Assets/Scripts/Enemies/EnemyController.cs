@@ -44,7 +44,7 @@ public abstract class EnemyController : CharacterController
     public override void Move()
     {
         if (taunted)
-            InTaunt();
+            InTaunt(this, player);
         else
             MovePattern(this, player);
     }
@@ -60,9 +60,9 @@ public abstract class EnemyController : CharacterController
     /// <summary>
     /// When the enemy is taunted. Follows the player.
     /// </summary>
-    public void InTaunt()
+    public void InTaunt(EnemyController enemy, PlayerController player)
     {
-
+        enemy.transform.position = Vector2.MoveTowards(enemy.transform.position, player.transform.position, enemy.movementSpeed * Time.deltaTime);
     }
 
     /// <summary>
