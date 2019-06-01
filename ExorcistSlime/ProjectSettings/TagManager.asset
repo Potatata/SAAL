@@ -11,6 +11,8 @@ TagManager:
   - BossHealthBar
   - Salt
   - PlayerHeartsArray
+  - PlayerStaminaBar
+  - StaminaBar
   layers:
   - Default
   - TransparentFX

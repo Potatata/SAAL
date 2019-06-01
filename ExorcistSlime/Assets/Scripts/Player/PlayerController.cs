@@ -22,10 +22,13 @@ public class PlayerController : CharacterController
     public GameObject saltPrefab;
     public bool isDashing = false;
     public bool isRestoringMana = false;
+    UIComponent playerStaminaBar;
 
     void Awake()
 	{
-		_controller = GetComponent<TopDownMovementController2D>();
+        playerStaminaBar = GameObject.FindGameObjectWithTag("PlayerStaminaBar").GetComponent<UIComponentPlayerStaminaBar>();
+        playerStaminaBar.Show();
+        _controller = GetComponent<TopDownMovementController2D>();
         movementSpeed = SPEED;
     }
 
@@ -53,6 +56,8 @@ public class PlayerController : CharacterController
         while(mana < MANA)
         {
             ++mana;
+            // Update UI
+            playerStaminaBar.UpdateUI(new Health { currentHealth = mana, totalHealth = MANA });
             yield return new WaitForSeconds(RESTORING_TIME);
         }
         isRestoringMana = false;
@@ -67,6 +72,8 @@ public class PlayerController : CharacterController
             {
                 movementSpeed = DASH_SPEED;
                 mana -= MANA_COMSUNPTION;
+                // Update UI
+                playerStaminaBar.UpdateUI(new Health { currentHealth = mana, totalHealth = MANA });
                 StartCoroutine(MakeTrail());
                 if(!isRestoringMana) StartCoroutine(RestoreMana());
             }
@@ -80,8 +87,6 @@ public class PlayerController : CharacterController
         _controller.move(_velocity * Time.deltaTime * movementSpeed);
         // Grab our current _velocity to use as a base for all calculations
         _velocity = _controller.velocity;
-        //@TODO FIX LUIS        
-        //health = _controller.health;
     }
 
     // The Update loop contains a very simple example of moving the character around

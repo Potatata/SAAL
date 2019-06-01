@@ -121,9 +121,10 @@ namespace Prime31 {
 
         void Awake()
 	    {
-
+            // UI
             playerHeartsArray = GameObject.FindGameObjectWithTag("PlayerHeartsArray").GetComponent<UIComponentPlayerHearts>();
             playerHeartsArray.Show();
+            playerHeartsArray.UpdateUIPlayer(PlayerInformation.GetInstance().health);
 
             // cache some components
             transform = GetComponent<Transform>();
