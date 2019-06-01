@@ -15,4 +15,10 @@ public class GameMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void ClickPlayAgainButton()
+    {
+        PlayerInformation.GetInstance().RestartGame();
+        SceneManager.LoadScene(firstStage);
+    }
 }

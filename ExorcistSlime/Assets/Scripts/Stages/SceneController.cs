@@ -8,6 +8,8 @@ public abstract class SceneController : MonoBehaviour
     //Scenes config const
     protected const int scenesAfterFirtsStage = 1;
     protected const int numberOfScenes = 4;
+    protected const int gameOverScene = 6;
+    protected const int gameWonScene = 7;
 
 
     public GameObject playerPrefab;
@@ -86,6 +88,16 @@ public abstract class SceneController : MonoBehaviour
         System.Random randomNumber = new System.Random();
         int nextScene = nextStageGenerator.getNextState(currentScene - scenesAfterFirtsStage);
         LoadScene(nextScene + scenesAfterFirtsStage);
+    }
+
+    public void ShowGameOverScene()
+    {
+        SceneManager.LoadScene(gameOverScene);
+    }
+
+    public void ShowGameWonScene()
+    {
+        SceneManager.LoadScene(gameWonScene);
     }
 
     protected void GenerateEnemy(EnemyGenerationPoint generationPoint)

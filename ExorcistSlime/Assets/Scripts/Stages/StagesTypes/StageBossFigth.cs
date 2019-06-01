@@ -19,15 +19,13 @@ public class StageBossFigth : SceneController
     }
 
     /// <summary>
-    /// Method that scans if there are enemies on the stage and print win screen
+    /// Method that scans if there are enemies on the stage and show won screen
     /// </summary>
     public override void Update()
     {
         if (enemiesOnStage <= 0)
         {
-            //winMethod?();
-            Debug.Log("GZ");
-            enemiesOnStage++;
+            ShowGameWonScene();
         }
     }
 
