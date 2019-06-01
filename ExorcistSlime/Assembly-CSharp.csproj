@@ -85,6 +85,7 @@
      <Compile Include="Assets\Scripts\UIComponents\UIComponent.cs" />
      <Compile Include="Assets\Scripts\UIComponents\UIComponentHealthBar.cs" />
      <Compile Include="Assets\Scripts\UIComponents\UIComponentPlayerHearts.cs" />
+     <Compile Include="Assets\Scripts\UIComponents\UIComponentPlayerStaminaBar.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/luisp/Documents/GitHub/SAL/ExorcistSlime/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
