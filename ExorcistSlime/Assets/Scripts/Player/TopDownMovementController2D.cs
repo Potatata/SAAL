@@ -316,13 +316,20 @@ namespace Prime31 {
             if (objectHit.gameObject.GetComponent<BulletController>())
             {
                 //Take damage and check if he died
-                --health;
-                if (health <= 0) Died();
+                PlayerInformation.GetInstance().DecreasePlayerHealth();
+                
+                //--health;
+                if (PlayerInformation.GetInstance().health <= 0) Died();
             }
         }
 
         void Died()
         {
+            SceneController sceneController = FindObjectOfType<SceneController>();
+            if(sceneController != null)
+            {
+                sceneController.ShowGameOverScene();
+            }
             //Destroy(gameObject);
         }
 

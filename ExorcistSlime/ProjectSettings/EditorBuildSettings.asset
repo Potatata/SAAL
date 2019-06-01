@@ -24,6 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/StagesScenes/BossFigthScene.unity
     guid: edda88d1e95fef342b798357f79ccb70
   - enabled: 1
+    path: Assets/Scenes/WinOrLose/GameOver.unity
+    guid: 3e7835f766a852749a6abf52ff4483c9
+  - enabled: 1
+    path: Assets/Scenes/WinOrLose/Victory.unity
+    guid: bac621d31442ab14d97fa8716c62c16e
+  - enabled: 1
     path: Assets/Scenes/Test.unity
     guid: 0abfcf307cbd5944aaf248a84d489d78
   m_configObjects: {}
