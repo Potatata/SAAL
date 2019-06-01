@@ -114,6 +114,8 @@ namespace Prime31 {
 
         UIComponentPlayerHearts playerHeartsArray;
 
+        private bool isInvencible = false;
+
         #endregion
 
 
@@ -317,17 +319,20 @@ namespace Prime31 {
 
         void OnTriggerEnter2D(Collider2D objectHit)
         {
-            //If it hit a bullet
-            if (objectHit.gameObject.GetComponent<BulletController>())
+            if (!isInvencible)
             {
-                //Take damage and check if he died
-                PlayerInformation.GetInstance().DecreasePlayerHealth();
+                //If it hit a bullet
+                if (objectHit.gameObject.GetComponent<BulletController>())
+                {
+                    //Take damage and check if he died
+                    PlayerInformation.GetInstance().DecreasePlayerHealth();
 
-                //Update UI
-                playerHeartsArray.UpdateUIPlayer(PlayerInformation.GetInstance().health);
+                    //Update UI
+                    playerHeartsArray.UpdateUIPlayer(PlayerInformation.GetInstance().health);
 
-                //--health;
-                if (PlayerInformation.GetInstance().health <= 0) Died();
+                    //--health;
+                    if (PlayerInformation.GetInstance().health <= 0) Died();
+                }
             }
         }
 
@@ -338,6 +343,11 @@ namespace Prime31 {
             {
                 sceneController.ShowGameOverScene();
             }
+        }
+
+        public void SetInvencibility(bool invencible)
+        {
+            isInvencible = invencible;
         }
 
         #endregion

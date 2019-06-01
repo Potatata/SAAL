@@ -35,6 +35,7 @@ public class PlayerController : CharacterController
     IEnumerator MakeTrail()
     {
         isDashing = true;
+        _controller.SetInvencibility(true);
         for (int i = 0; i < SALT_PARTICLES; i++)
         {
             LeaveTrail();
@@ -43,6 +44,7 @@ public class PlayerController : CharacterController
         }
         movementSpeed = SPEED;
         isDashing = false;
+        _controller.SetInvencibility(false);
     }
 
     private void LeaveTrail()
