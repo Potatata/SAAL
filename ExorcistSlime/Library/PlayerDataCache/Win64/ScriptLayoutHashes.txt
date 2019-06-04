@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/luisp/Downloads/Games/ExorcistSlime/ExorcistSlime.exe
+C:/Users/Arven/Desktop/Executable/ExorcistSlime.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/StagesScenes/FirstStage.unity
@@ -151,7 +151,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 510fefd6a544e16a3ffefa557ddcba39 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e51c09a4cc447f11db225afcd8e3e490 Unity.TextMeshPro.dll:TMPro.TMP_Settings
-edfadbb14d6b4a9432d271cf4d639ead Assembly-CSharp.dll:.PlayerController
+e0c6be8ec454e85c610c25ddc7500bf1 Assembly-CSharp.dll:.PlayerController
 8e7fe12e3d9b549ca851d7ca30eca079 Assembly-CSharp.dll:.BossEnemyCirclesController
 85f01ac7a98d52f4a8891b5102bd3d50 Assembly-CSharp.dll:.StageWithEnemies
 cf96e5f7b3d069bab453925bd41be04e UnityEngine.TestRunner.dll:UnityEngine.TestTools.EnumerableSetUpTearDownCommandState
@@ -178,8 +178,8 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.EnemyGenerationPoint
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 c928789dd894d0852a10eda32ce13b86 Assembly-CSharp.dll:.NoEnemiesStage
+facfccdf32011b6bf987af8d01f36ee3 Assembly-CSharp.dll:.UIComponentPlayerStaminaBar
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.GameMenu
-facfccdf32011b6bf987af8d01f36ee3 Assembly-CSharp.dll:.UIComponentPlayerStaminaBar
