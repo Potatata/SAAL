@@ -44202,7 +44202,7 @@ GameObject:
   - component: {fileID: 1504199134}
   - component: {fileID: 1504199133}
   m_Layer: 0
-  m_Name: Panel
+  m_Name: HeartsPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66695,12 +66695,12 @@ PrefabInstance:
     - target: {fileID: 2952158003117715365, guid: a67d6d226bbf1a54e85cde489e58fa06,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -532
       objectReference: {fileID: 0}
     - target: {fileID: 2952158003117715365, guid: a67d6d226bbf1a54e85cde489e58fa06,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -256
       objectReference: {fileID: 0}
     - target: {fileID: 2952158003117715365, guid: a67d6d226bbf1a54e85cde489e58fa06,
         type: 3}
@@ -66715,22 +66715,22 @@ PrefabInstance:
     - target: {fileID: 2952158003117715365, guid: a67d6d226bbf1a54e85cde489e58fa06,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2952158003117715365, guid: a67d6d226bbf1a54e85cde489e58fa06,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2952158003117715365, guid: a67d6d226bbf1a54e85cde489e58fa06,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2952158003117715365, guid: a67d6d226bbf1a54e85cde489e58fa06,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2952158003117715365, guid: a67d6d226bbf1a54e85cde489e58fa06,
         type: 3}
@@ -66845,12 +66845,12 @@ PrefabInstance:
     - target: {fileID: 5903373194472683813, guid: 91e9b73ac03817a4b9824f98c4b0c60f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -119
+      value: -122
       objectReference: {fileID: 0}
     - target: {fileID: 5903373194472683813, guid: 91e9b73ac03817a4b9824f98c4b0c60f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -84
+      value: -74
       objectReference: {fileID: 0}
     - target: {fileID: 5903373194472683813, guid: 91e9b73ac03817a4b9824f98c4b0c60f,
         type: 3}

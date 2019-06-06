@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/Arven/Desktop/Executable/ExorcistSlime.exe
+C:/Users/Sivana/Downloads/ExorcistSlime.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/StagesScenes/FirstStage.unity

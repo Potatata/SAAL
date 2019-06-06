@@ -10,6 +10,7 @@ public class UIComponentHealthBar : UIComponent
         //Sets the health bar in full
         ScaleHealthBar(new Health { currentHealth = 1, totalHealth = 1 });
         healthBar = GameObject.FindGameObjectWithTag("BossBar");
+        //@TODO Sivana bug somewhere here
         Hide();
     }
 
