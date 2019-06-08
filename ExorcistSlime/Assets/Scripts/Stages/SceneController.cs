@@ -11,7 +11,6 @@ public abstract class SceneController : MonoBehaviour
     protected const int gameOverScene = 6;
     protected const int gameWonScene = 7;
 
-
     public GameObject playerPrefab;
     public GameObject playerRespawn;
     protected int currentScene;
@@ -52,8 +51,6 @@ public abstract class SceneController : MonoBehaviour
     {
         canvas = GetComponentInChildren<Canvas>();
         canvas.worldCamera = Camera.main;
-        healthBar = gameObject.GetComponentInChildren<UIComponentHealthBar>();
-        healthBar.Hide();
     }
 
     public virtual void Update(){}
@@ -100,7 +97,7 @@ public abstract class SceneController : MonoBehaviour
         SceneManager.LoadScene(gameWonScene);
     }
 
-    protected void GenerateEnemy(EnemyGenerationPoint generationPoint)
+    protected void GenerateEnemy(GameObject generationPoint)
     {
         int enemyType = enemyTypeGenerator.getNextState(currentScene - scenesAfterFirtsStage);
         switch (enemyType)

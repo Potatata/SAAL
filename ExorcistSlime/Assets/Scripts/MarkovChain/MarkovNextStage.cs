@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assets.Scripts.MarkovChain
 {
-    public class MarkovNextStage :  MarkovChain
+    public class MarkovNextStage : MarkovChain
     {
         public MarkovNextStage()
         {
@@ -24,9 +24,24 @@ namespace Assets.Scripts.MarkovChain
                 {0, 0.2, 0.4, 0.4, 0 },
                 //Stage 4
                 {0, 0, 0, 0.5, 0.5 },
-                //BossFigth
+                //BossFight
                 {0, 0, 0, 0, 1 }
             };
+
+            //Markov to get to the boss battle
+            //markovProbabilities = new double[5, 5]
+            //{
+            //    //Stage 1
+            //    {0, 0, 0, 0, 1 },
+            //    //Stage 2
+            //    {0, 0, 0, 0, 0 },
+            //    //Stage 3
+            //    {0, 0, 0, 0, 0 },
+            //    //Stage 4
+            //    {0, 0, 0, 0, 0 },
+            //    //BossFight
+            //    {0, 0, 0, 0, 0 }
+            //};
         }
 
     }

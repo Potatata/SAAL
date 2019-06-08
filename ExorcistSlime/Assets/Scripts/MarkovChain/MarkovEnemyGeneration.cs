@@ -25,7 +25,7 @@ namespace Assets.Scripts.MarkovChain
                 {0.1, 0.3, 0.6, 0 },
                 //Fourth Stage
                 {0, 0.3, 0.7, 0 },
-                //Boss Figth
+                //Boss Fight
                 {0, 0, 0, 1 }
 
             };

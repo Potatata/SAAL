@@ -30,7 +30,6 @@ public class PlayerController : CharacterController
     void Awake()
 	{
         playerStaminaBar = GameObject.FindGameObjectWithTag("PlayerStaminaBar").GetComponent<UIComponentPlayerStaminaBar>();
-        playerStaminaBar.Show();
         _controller = GetComponent<TopDownMovementController2D>();
         movementSpeed = SPEED;
     }
