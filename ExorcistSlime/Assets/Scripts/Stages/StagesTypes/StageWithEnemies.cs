@@ -3,16 +3,16 @@ using UnityEngine;
 
 public class StageWithEnemies : SceneController
 {
-    private EnemyGenerationPoint[] enemyGenerationPoints;
+    private GameObject[] enemyGenerationPoints;
     public GameObject nextStageDoor;
 
     public override void Awake()
     {
         base.Awake();
-        enemyGenerationPoints = FindObjectsOfType<EnemyGenerationPoint>();
+        enemyGenerationPoints = GameObject.FindGameObjectsWithTag("EnemyGenerationPoint");
         enemiesOnStage = enemyGenerationPoints.Length;
         
-        foreach (EnemyGenerationPoint generationPoint in enemyGenerationPoints)
+        foreach (GameObject generationPoint in enemyGenerationPoints)
         {
             GenerateEnemy(generationPoint);
         }

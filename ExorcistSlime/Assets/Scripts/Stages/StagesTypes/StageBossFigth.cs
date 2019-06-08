@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class StageBossFigth : SceneController
 {
-    private EnemyGenerationPoint generationPoint;
+    private GameObject generationPoint;
     private MarkovEnemyGeneration enemyTypeGenerator;
 
     public override void Awake()
     {
         base.Awake();
         enemyTypeGenerator = new MarkovEnemyGeneration();
-        generationPoint = FindObjectOfType<EnemyGenerationPoint>();
+        generationPoint = GameObject.FindGameObjectWithTag("EnemyGenerationPoint");
         enemiesOnStage = 1;
         if (generationPoint != null)
         {

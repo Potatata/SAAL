@@ -66236,6 +66236,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyGenerationPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 7105761806214245338, guid: bcb311f8c67cc4244b44602c009d1f2b,
+        type: 3}
+      propertyPath: m_TagString
+      value: EnemyGenerationPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 7105761806214245413, guid: bcb311f8c67cc4244b44602c009d1f2b,
         type: 3}
       propertyPath: m_LocalPosition.x

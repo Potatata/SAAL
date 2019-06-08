@@ -13,6 +13,7 @@ TagManager:
   - PlayerHeartsArray
   - PlayerStaminaBar
   - StaminaBar
+  - EnemyGenerationPoint
   layers:
   - Default
   - TransparentFX

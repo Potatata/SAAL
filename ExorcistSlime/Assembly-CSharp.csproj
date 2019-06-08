@@ -76,7 +76,6 @@
      <Compile Include="Assets\Scripts\Player\TopDownMovementController2D.cs" />
      <Compile Include="Assets\Scripts\PlayerInformation\PlayerInformation.cs" />
      <Compile Include="Assets\Scripts\Stages\SceneController.cs" />
-     <Compile Include="Assets\Scripts\Stages\StageComponents\EnemyGenerationPoint.cs" />
      <Compile Include="Assets\Scripts\Stages\StageComponents\NextStageDoor.cs" />
      <Compile Include="Assets\Scripts\Stages\StageComponents\NextStageTrigger.cs" />
      <Compile Include="Assets\Scripts\Stages\StagesTypes\NoEnemiesStage.cs" />
