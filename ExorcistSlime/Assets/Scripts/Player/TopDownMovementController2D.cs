@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using Assets.Scripts.UIComponents;
+using System.Collections;
 
 namespace Prime31 {
 
@@ -9,6 +10,9 @@ namespace Prime31 {
     public class TopDownMovementController2D : MonoBehaviour
     {
         #region internal types
+
+        //Constants
+        private const float INVINCIBILITY_TIME = 2f;
 
         struct CharacterRaycastOrigins
 	    {
@@ -114,7 +118,7 @@ namespace Prime31 {
 
         UIComponentPlayerHearts playerHeartsArray;
 
-        private bool isInvencible = false;
+        private bool isInvincible = false;
 
         #endregion
 
@@ -318,7 +322,7 @@ namespace Prime31 {
 
         void OnTriggerEnter2D(Collider2D objectHit)
         {
-            if (!isInvencible)
+            if (!isInvincible)
             {
                 //If it hit a bullet
                 if (objectHit.gameObject.GetComponent<BulletController>())
@@ -331,6 +335,8 @@ namespace Prime31 {
 
                     //--health;
                     if (PlayerInformation.GetInstance().health <= 0) Died();
+
+                    StartCoroutine(Invincibility());
                 }
             }
         }
@@ -344,9 +350,16 @@ namespace Prime31 {
             }
         }
 
-        public void SetInvencibility(bool invencible)
+        public void SetInvincibility(bool invincible)
         {
-            isInvencible = invencible;
+            isInvincible = invincible;
+        }
+
+        protected IEnumerator Invincibility()
+        {
+            isInvincible = true;
+            yield return new WaitForSeconds(INVINCIBILITY_TIME);
+            isInvincible = false;
         }
 
         #endregion
