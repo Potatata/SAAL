@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using Assets.Scripts.UIComponents;
+using System.Collections;
 
 namespace Prime31 {
 
@@ -9,6 +10,9 @@ namespace Prime31 {
     public class TopDownMovementController2D : MonoBehaviour
     {
         #region internal types
+
+        //Constants
+        private const float INVENCIBILITY_TIME = 2f;
 
         struct CharacterRaycastOrigins
 	    {
@@ -331,6 +335,8 @@ namespace Prime31 {
 
                     //--health;
                     if (PlayerInformation.GetInstance().health <= 0) Died();
+
+                    StartCoroutine(Invencibility());
                 }
             }
         }
@@ -347,6 +353,13 @@ namespace Prime31 {
         public void SetInvencibility(bool invencible)
         {
             isInvencible = invencible;
+        }
+
+        protected IEnumerator Invencibility()
+        {
+            isInvencible = true;
+            yield return new WaitForSeconds(INVENCIBILITY_TIME);
+            isInvencible = false;
         }
 
         #endregion
