@@ -8,52 +8,25 @@ public class UIComponentPlayerStaminaBar : UIComponent
     public override void Start()
     {
         //Sets the health bar in full
-        ScaleHealthBar(new Health { currentHealth = 1, totalHealth = 1 });
+        ScaleStaminaBar(new Health { currentHealth = 1, totalHealth = 1 });
         staminaBar = GameObject.FindGameObjectWithTag("StaminaBar");
-    }
-
-    /// <summary>
-    /// Shows the UI component
-    /// </summary>
-    public override void Show()
-    {
-        ChangeChildRenders(true);
-    }
-
-    /// <summary>
-    /// Hides or shows all child renders
-    /// </summary>
-    /// <param name="newStatus">The new status for all the children</param>
-    private void ChangeChildRenders(bool newStatus)
-    {
-        Renderer[] renderers = gameObject.GetComponentsInChildren<Renderer>();
-        foreach (Renderer renderer in renderers)
-            renderer.enabled = newStatus;
-    }
-
-    /// <summary>
-    /// Hides the UI component
-    /// </summary>
-    public override void Hide()
-    {
-        ChangeChildRenders(false);
     }
 
     /// <summary>
     /// When there are changes in the UI, show
     /// </summary>
-    /// <param name="health">The new health to show</param>
-    public override void UpdateUI(Health health)
+    /// <param name="stamina">The new stamina to show</param>
+    public override void UpdateUI(Health stamina)
     {
-        ScaleHealthBar(health);
+        ScaleStaminaBar(stamina);
     }
 
     /// <summary>
-    /// Method to scale the health bar
+    /// Method to scale the stamina bar
     /// </summary>
-    /// <param name="health">The new health to show</param>
-    public void ScaleHealthBar(Health health)
+    /// <param name="stamina">The new stamina to show</param>
+    public void ScaleStaminaBar(Health stamina)
     {
-        staminaBar.transform.localScale = new Vector3(health.currentHealth / health.totalHealth, 1f);
+        staminaBar.transform.localScale = new Vector3(stamina.currentHealth / stamina.totalHealth, 1f);
     }
 }

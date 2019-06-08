@@ -10,24 +10,12 @@ namespace Assets.Scripts.UIComponents
         public Sprite fullHeart;
         public Sprite emptyHeart;
 
-        public override void Hide()
-        {
-            for (int i = 0; i < playerHeartsArray.Length; i++)
-            {
-                playerHeartsArray[i].enabled = false;
-            }
-        }
-
-        public override void Show()
+        public override void Start()
         {
             for (int i = 0; i < playerHeartsArray.Length; i++)
             {
                 playerHeartsArray[i].enabled = true;
             }
-        }
-
-        public override void Start()
-        {
         }
 
         public override void UpdateUI(Health health)

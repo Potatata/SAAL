@@ -52,8 +52,6 @@ public abstract class SceneController : MonoBehaviour
     {
         canvas = GetComponentInChildren<Canvas>();
         canvas.worldCamera = Camera.main;
-        healthBar = gameObject.GetComponentInChildren<UIComponentHealthBar>();
-        healthBar.Hide();
     }
 
     public virtual void Update(){}

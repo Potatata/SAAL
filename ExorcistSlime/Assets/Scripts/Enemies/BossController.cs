@@ -7,8 +7,12 @@ public abstract class BossController : EnemyController
     public override void Start()
     {
         base.Start();
+        //Shows the health bar
+         GameObject.Find("Canvas").transform.Find("BossHealthBar").gameObject.SetActive(true); ;
+
+        //Gets the health bar element for updates
         healthBar = GameObject.FindGameObjectWithTag("BossHealthBar").GetComponent<UIComponentHealthBar>();
-        healthBar.Show();
+
     }
 
     protected override void TakeDamage()
@@ -16,7 +20,5 @@ public abstract class BossController : EnemyController
         base.TakeDamage();
         //Updates the health bar when hit
         healthBar.UpdateUI(health);
-        Debug.Log(health.currentHealth);
-        Debug.Log(health.totalHealth);
     }
 }

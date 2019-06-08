@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 104
+  controlID: 116
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 105
+  controlID: 71
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 106
+  controlID: 52
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -336,34 +336,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Stages/StagesTypes
+    - Assets/Scripts/Enemies/EnemiesType
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Stages/StagesTypes
+  - Assets/Scripts/Enemies/EnemiesType
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\SAL\ExorcistSlime
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 172}
-    m_SelectedIDs: e8310000
-    m_LastClickedID: 12776
-    m_ExpandedIDs: 000000003e300000ea3000000c3100001e310000323100008031000000ca9a3b
+    m_SelectedIDs: 86270000
+    m_LastClickedID: 10118
+    m_ExpandedIDs: 000000007e2600005427000082270000a0270000b82700001e28000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Bullet
+      m_OriginalName: Bullet
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 10378
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -377,7 +377,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003e300000ea3000000c3100001e3100003231000080310000
+    m_ExpandedIDs: 000000007e2600005427000082270000a0270000b82700001e280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -498,7 +498,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 32d4ffff48d4ffffced5ffffd2d5ffffd6d5ffff1ed6ffffa2d6ffffa6d6ffff12d7ffff54d7ffff62d7ffffe2d7fffff8d7ffff7ed9ffff82d9ffff86d9ffffced9ffff52daffff56daffffc2daffff04dbffff12dbffff92dbffffa8dbffff2eddffff32ddffff36ddffff7eddffff02deffff06deffff72deffffb4deffffc2deffff42dfffff58dfffffe2e0ffffeae0fffff2e0ffff3ee1ffffc6e1ffffcee1ffff3ee2ffff84e2ffff96e2ffff24e3ffff3ce3ffffc2e4ffffc6e4ffffcae4ffff12e5ffff96e5ffff9ae5ffff06e6ffff48e6ffff56e6ffff16eaffff48ebffff84ecffffe6ecffff70edffff72eeffffb4eeffff24f0ffffc0f0ffff2ef2ffff36f2ffff8a320000b03200003434000080340000ce340000d6340000f4340000283600007436000088370000063800005c390000443a0000a43b0000d05700003858000040580000
+      m_ExpandedIDs: 12b9ffff28b9ffffb2baffffbabaffffc2baffff0ebbffff96bbffff0cbcffff82bcffff8abcffff9cbcffffbac0ffffd4c0ffff5ec2ffff66c2ffff6ec2ffffbac2ffff42c3ffffb8c3ffff2ec4ffff36c4ffff48c4ffff0ec5ffff48eafffff0f2ffff24f8ffff74f8fffffaf8ffff80f9ffff1efaffff8afaffffb4fbffffbcfbffffba290000c2290000ec2b0000122c0000042d0000242d0000262e0000462e00009a2f0000a22f00000e300000343000006230000084300000163300003c330000c0360000e6360000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -704,7 +704,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 627
-    width: 1524
-    height: 373
+    y: 623
+    width: 1464
+    height: 377
   m_PersistentViewDataDictionary: {fileID: 0}
