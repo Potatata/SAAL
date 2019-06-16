@@ -93,7 +93,7 @@ public class PlayerController : CharacterController
         if (Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") != 0)
         {
             //Player dash mechanic
-            if (Input.GetButtonDown("Fire1") && !isDashing && (mana > MANA_COMSUNPTION))
+            if (Input.GetButtonDown("Fire1") && !isDashing && (mana > MANA_COMSUNPTION) && !PauseMenuController.isPaused)
             {
                 movementSpeed = DASH_SPEED;
                 mana -= MANA_COMSUNPTION;
@@ -108,7 +108,7 @@ public class PlayerController : CharacterController
     void Taunt()
     {
         //Player taunt mechanic
-        if (Input.GetButtonDown("Fire2") && !isTaunting)
+        if (Input.GetButtonDown("Fire2") && !isTaunting && !PauseMenuController.isPaused)
         {
             StartCoroutine(StartTaunt());
         }
