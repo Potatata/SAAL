@@ -11,6 +11,7 @@ public class GameMenu : MonoBehaviour
     /// </summary>
     public void ClickPlayButton()
     {
+        PauseMenuController.isPaused = false;
         SceneManager.LoadScene(firstStage);
     }
 
