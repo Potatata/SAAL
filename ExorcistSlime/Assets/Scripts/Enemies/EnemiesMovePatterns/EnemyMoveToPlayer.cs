@@ -12,5 +12,7 @@ public class EnemyMoveToPlayer : EnemyMovePattern
         int direction = (Vector2.Distance(enemy.gameObject.transform.position, player.gameObject.transform.position) > DISTANCE_TILL_PLAYER) ? 1 : -1;
         //Moves in the desired direction
         enemy.transform.position = Vector2.MoveTowards(enemy.transform.position, player.transform.position, enemy.movementSpeed * Time.deltaTime * direction);
+        //Enemy goes towards the player
+        enemy.transform.up = new Vector2(player.transform.position.x - enemy.transform.position.x, player.transform.position.y - enemy.transform.position.y);
     }
 }
