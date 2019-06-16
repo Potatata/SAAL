@@ -6,7 +6,6 @@ public class EnemySimpleShootsAtPlayerController : EnemyController
     public override void Awake()
     {
         base.Awake();
-        shootingTimer = 1.5f;
         health.totalHealth = health.currentHealth = 1f;
 
         //Starts the bullet speed type.

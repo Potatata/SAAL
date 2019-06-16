@@ -5,7 +5,8 @@ using UnityEngine;
 public abstract class EnemyController : CharacterController
 {
     //Constants
-    private const float INVINCIBILITY_TIME = 5f;
+    public const float INVINCIBILITY_TIME = 2f;
+    public float SPEED_INCREASE_TAUNT;
 
     public float shootingTimer;
     public GameObject bulletPrefab;
@@ -24,7 +25,6 @@ public abstract class EnemyController : CharacterController
         player = FindObjectOfType<PlayerController>();
         sceneController = FindObjectOfType<SceneController>();
         taunted = isInvincible = false;
-        movementSpeed = 1;
     }
 
     public virtual void Start()
@@ -62,7 +62,7 @@ public abstract class EnemyController : CharacterController
     /// </summary>
     public void InTaunt(EnemyController enemy, PlayerController player)
     {
-        enemy.transform.position = Vector2.MoveTowards(enemy.transform.position, player.transform.position, enemy.movementSpeed * Time.deltaTime);
+        enemy.transform.position = Vector2.MoveTowards(enemy.transform.position, player.transform.position, enemy.movementSpeed * Time.deltaTime * SPEED_INCREASE_TAUNT);
     }
 
     /// <summary>
@@ -122,6 +122,10 @@ public abstract class EnemyController : CharacterController
         Destroy(gameObject);
     }
 
+    /// <summary>
+    /// Sets the enemy invicible for a certain amount of time
+    /// </summary>
+    /// <returns>When it is not invincible anymore</returns>
     protected IEnumerator Invincibility()
     {
         isInvincible = true;

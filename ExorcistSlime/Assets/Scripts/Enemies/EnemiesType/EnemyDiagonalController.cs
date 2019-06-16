@@ -6,7 +6,6 @@ public class EnemyDiagonalController : EnemyController
     public override void Awake()
     {
         base.Awake();
-        shootingTimer = 2;
         health.totalHealth = health.currentHealth = 1f;
 
         //Starts all the bullets

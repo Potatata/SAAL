@@ -203,8 +203,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1f02089b95f3f4c9ddcb9b695d2c77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 1
-  shootingTimer: 0
+  movementSpeed: 2
+  SPEED_INCREASE_TAUNT: 1.75
+  shootingTimer: 1.5
   bulletPrefab: {fileID: 3456733128906575650, guid: a71299d5a8e2ddd48b73e1972c00c2c7,
     type: 3}
   taunted: 0

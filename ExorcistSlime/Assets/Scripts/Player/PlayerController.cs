@@ -5,15 +5,15 @@ using System.Collections;
 public class PlayerController : CharacterController
 {
     //Constants
-    private const float SPEED = 16f;
-    private const int SALT_PARTICLES = 16 ;
-    private const float DASH_SPEED = SPEED*3;
-    private const float DASH_TIME = 0.0001f;
-    private const int MANA_COMSUNPTION = 20;
-    private const int MANA = 60;
-    private const float RESTORING_TIME = 0.1f;
-    private const float TAUNTING_TIME = 20f;
-    public const float DISTANCE_TILL_PLAYER = 10;
+    public const float SPEED = 16f;
+    public const int SALT_PARTICLES = 16 ;
+    public const float DASH_SPEED = SPEED*3;
+    public const float DASH_TIME = 0.01f;
+    public const int MANA_COMSUNPTION = 20;
+    public const int MANA = 60;
+    public const float RESTORING_TIME = 0.1f;
+    public const float TAUNTING_TIME = 2.5f;
+    public const float DISTANCE_TILL_PLAYER = 15;
 
     // Movement configuration
     public int mana = MANA;
@@ -67,28 +67,25 @@ public class PlayerController : CharacterController
         isRestoringMana = false;
     }
 
-    IEnumerator MakeTaunt()
+    IEnumerator StartTaunt()
     {
         EnemyController[] nearbyEnemies = FindObjectsOfType<EnemyController>();
         if (!(nearbyEnemies.Length == 0))
         {
             foreach (EnemyController enemy in nearbyEnemies) {
-                if((Vector2.Distance(enemy.gameObject.transform.position, this.gameObject.transform.position)) <= DISTANCE_TILL_PLAYER * 3)
+                if((Vector2.Distance(enemy.gameObject.transform.position, this.gameObject.transform.position)) <= DISTANCE_TILL_PLAYER)
                 {
                     enemy.taunted = true;
                 }
             }
             isTaunting = true;
-            Debug.Log("Taunting!");
             yield return new WaitForSeconds(TAUNTING_TIME);
-            Debug.Log("Stop taunting!");
             foreach (EnemyController enemy in nearbyEnemies)
             {
                 enemy.taunted = false;
             }
             isTaunting = false;
         }
- 
     }
 
     void Dash()
@@ -113,7 +110,7 @@ public class PlayerController : CharacterController
         //Player taunt mechanic
         if (Input.GetButtonDown("Fire2") && !isTaunting)
         {
-            StartCoroutine(MakeTaunt());
+            StartCoroutine(StartTaunt());
         }
     }
 
