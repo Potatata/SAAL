@@ -24,7 +24,6 @@ public abstract class EnemyController : CharacterController
         player = FindObjectOfType<PlayerController>();
         sceneController = FindObjectOfType<SceneController>();
         taunted = isInvincible = false;
-        movementSpeed = 1;
     }
 
     public virtual void Start()
