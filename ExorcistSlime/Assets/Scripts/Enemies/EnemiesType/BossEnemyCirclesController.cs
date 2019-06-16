@@ -6,7 +6,6 @@ public class BossEnemyCirclesController : BossController
     public override void Awake()
     {
         base.Awake();
-        shootingTimer = 5f;
         health.totalHealth = health.currentHealth = 10f;
         //Starts the bullet direction type
         //Sides
