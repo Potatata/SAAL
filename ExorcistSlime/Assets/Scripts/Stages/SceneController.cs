@@ -47,7 +47,7 @@ public abstract class SceneController : MonoBehaviour
 
     }
 
-    public void Start()
+    public virtual void Start()
     {
         canvas = GetComponentInChildren<Canvas>();
         canvas.worldCamera = Camera.main;
