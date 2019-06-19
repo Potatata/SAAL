@@ -41,4 +41,10 @@ public class StageWithEnemies : SceneController
         }
         playerCanNextStage = true;
     }
+
+    public override void Start()
+    {
+        base.Start();
+        AudioManager.GetInstance().PlaySecondLevelSong();
+    }
 }

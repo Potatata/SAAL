@@ -29,4 +29,10 @@ public class StageBossFigth : SceneController
         }
     }
 
+    public override void Start()
+    {
+        base.Start();
+        AudioManager.GetInstance().PlayBossSong();
+    }
+
 }

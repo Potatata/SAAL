@@ -12,4 +12,10 @@ public class NoEnemiesStage : SceneController {
         playerCanNextStage = true;
     }
 
+    public override void Start()
+    {
+        base.Start();
+        AudioManager.GetInstance().PlayFirstLevelSong();
+    }
+
 }

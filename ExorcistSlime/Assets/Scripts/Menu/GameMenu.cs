@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameMenu : MonoBehaviour
 {
     private const int firstStage = 1;
+
     /// <summary>
     /// Starts the game
     /// </summary>
