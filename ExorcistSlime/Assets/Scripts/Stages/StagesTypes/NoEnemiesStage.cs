@@ -15,7 +15,7 @@ public class NoEnemiesStage : SceneController {
     public override void Start()
     {
         base.Start();
-        FindObjectOfType<AudioManager>().PlayFirstLevelSong();
+        AudioManager.GetInstance().PlayFirstLevelSong();
     }
 
 }

@@ -48,23 +48,42 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 3e06a54beea67ea45b00bba35f6656c7, type: 3}
     volume: 0.528
     pitch: 1
-    source: {fileID: 0}
     loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
   - name: FirstLevelSong
     clip: {fileID: 8300000, guid: 6497944c8680b454497cca3d05cd7c19, type: 3}
     volume: 0.509
     pitch: 1
-    source: {fileID: 0}
     loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
   - name: SecondLevelSong
     clip: {fileID: 8300000, guid: 1e0cd154f4b2ee34caa4f40509cf5c1f, type: 3}
     volume: 0.49
     pitch: 1
-    source: {fileID: 0}
     loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
   - name: FinalBossSong
     clip: {fileID: 8300000, guid: de6750cac466db54599b22f5a7616808, type: 3}
     volume: 0.495
     pitch: 1
-    source: {fileID: 0}
     loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: VictorySong
+    clip: {fileID: 8300000, guid: 2523753aa0f5d9540b25c175f3361689, type: 3}
+    volume: 0.495
+    pitch: 1
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: GameOverSong
+    clip: {fileID: 8300000, guid: 99751cd78e270964db837586278ca5ea, type: 3}
+    volume: 0.495
+    pitch: 1
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  mixerGroup: {fileID: 0}

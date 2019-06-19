@@ -727,6 +727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1126789476}
   - component: {fileID: 1126789477}
+  - component: {fileID: 1126789478}
   m_Layer: 0
   m_Name: VictoryScene
   m_TagString: Untagged
@@ -762,6 +763,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19f7796d7a1a85b41b98a52494f0cd0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1126789478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126789475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53de7e86f01701e46972be042fb0976b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1418919923

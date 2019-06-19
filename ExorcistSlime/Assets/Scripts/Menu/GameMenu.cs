@@ -7,12 +7,6 @@ public class GameMenu : MonoBehaviour
 {
     private const int firstStage = 1;
 
-    void Start()
-    {
-        FindObjectOfType<AudioManager>().PlayMainMenuSong();
-    }
-
-
     /// <summary>
     /// Starts the game
     /// </summary>

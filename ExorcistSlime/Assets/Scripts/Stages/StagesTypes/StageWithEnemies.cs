@@ -45,6 +45,6 @@ public class StageWithEnemies : SceneController
     public override void Start()
     {
         base.Start();
-        FindObjectOfType<AudioManager>().PlaySecondLevelSong();
+        AudioManager.GetInstance().PlaySecondLevelSong();
     }
 }
