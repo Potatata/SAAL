@@ -20,7 +20,6 @@ public class BossEnemyCirclesController : BossController
         bullets.Add(new BulletSetDirection() { Up = 3, Right = 0 });
         bullets.Add(new BulletSetDirection() { Up = -3, Right = 0 });
 
-        //Semi diagonals
     }
 
     protected override void MovePattern(EnemyController enemy, PlayerController player)

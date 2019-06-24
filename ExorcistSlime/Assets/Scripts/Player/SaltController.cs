@@ -1,11 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SaltController : MonoBehaviour
 {
     //Fields
-    public float lifeTime = 5f;
+    public float lifeTime = 1f;
     public int life = 1;
 
     public void Start()
@@ -17,13 +16,14 @@ public class SaltController : MonoBehaviour
     {
         while (true)
         {
-            --life;
             yield return new WaitForSeconds(lifeTime);
+            Debug.Log("Hi!");
+            --life;
         }
     }
 
     void Update()
     {
-        if (life < 0) Destroy(gameObject);
+        if (life <= 0) Destroy(gameObject);
     }
 }
