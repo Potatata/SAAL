@@ -212,6 +212,7 @@ MonoBehaviour:
   isDashing: 0
   isRestoringMana: 0
   isTaunting: 0
+  anim: {fileID: 8599810226276188393}
 --- !u!1 &2010419193507424199
 GameObject:
   m_ObjectHideFlags: 0

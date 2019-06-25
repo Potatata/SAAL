@@ -26,6 +26,7 @@ public class PlayerController : CharacterController
     public bool isRestoringMana = false;
     public bool isTaunting = false;
     UIComponent playerStaminaBar;
+    public Animator anim;
 
     void Awake()
 	{
@@ -79,12 +80,14 @@ public class PlayerController : CharacterController
                 }
             }
             isTaunting = true;
+            anim.SetTrigger("PlayerTauntAnimTrigger");
             yield return new WaitForSeconds(TAUNTING_TIME);
             foreach (EnemyController enemy in nearbyEnemies)
             {
                 enemy.taunted = false;
             }
             isTaunting = false;
+            anim.SetTrigger("PlayerReturnTauntAnimTrigger");
         }
     }
 
