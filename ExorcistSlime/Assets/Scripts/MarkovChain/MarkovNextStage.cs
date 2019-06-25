@@ -17,31 +17,16 @@ namespace Assets.Scripts.MarkovChain
             markovProbabilities = new double[5, 5]
             {
                 //Stage 1
-                {0, 0.6, 0.3, 0.1, 0 },
+                {0, 1, 0, 0, 0 },
                 //Stage 2
-                {0, 0.5, 0.4, 0.1, 0 },
+                {0, 0.3, 0.7, 0, 0 },
                 //Stage 3
-                {0, 0.2, 0.4, 0.4, 0 },
+                {0, 0, 0.4, 0.6, 0 },
                 //Stage 4
-                {0, 0, 0, 0.5, 0.5 },
+                {0, 0, 0.3, 0.1, 0.6 },
                 //BossFight
                 {0, 0, 0, 0, 1 }
             };
-
-            //Markov to get to the boss battle
-            //markovProbabilities = new double[5, 5]
-            //{
-            //    //Stage 1
-            //    {0, 0, 0, 0, 1 },
-            //    //Stage 2
-            //    {0, 0, 0, 0, 0 },
-            //    //Stage 3
-            //    {0, 0, 0, 0, 0 },
-            //    //Stage 4
-            //    {0, 0, 0, 0, 0 },
-            //    //BossFight
-            //    {0, 0, 0, 0, 0 }
-            //};
         }
 
     }
