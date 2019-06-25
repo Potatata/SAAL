@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 80
+  controlID: 51
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 81
+  controlID: 52
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 82
+  controlID: 53
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -336,20 +336,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Sprites
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Sprites
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\luisp\Documents\GitHub\SAL\ExorcistSlime
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 271}
-    m_SelectedIDs: a83f0000
-    m_LastClickedID: 16296
-    m_ExpandedIDs: 00000000722600000c3500000c380000ea3b0000523d0000a83f0000f0420000b8450000f6450000d64900005c5100007a5200007a5b0000365e000000ca9a3b
+    scrollPos: {x: 0, y: 479.9992}
+    m_SelectedIDs: 845b0000
+    m_LastClickedID: 23428
+    m_ExpandedIDs: 00000000782600001235000012380000f03b0000583d0000ae3f0000f6420000be450000fc450000e04900006651000084520000845b00004a5d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -377,7 +377,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000722600000c3500000c380000ea3b0000523d0000a83f0000f0420000b8450000f6450000d64900005c5100007a5200007a5b0000365e0000
+    m_ExpandedIDs: 00000000782600001235000012380000f03b0000583d0000ae3f0000f6420000be450000fc450000e04900006651000084520000845b00004a5d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -498,21 +498,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d2a2ffffe6a2ffff3aa3ffff44a3ffff4ea3ffffd2a3ffff88a4ffff32a5ffffd8a5ffff58a6ffff5ca6fffff8a9ffff0caaffff9cabffffa8abffffb4abffff3cacfffff2acffff9eadffff48aeffffd6aeffffdaaeffff42b1ffff56b1ffffaab1ffffb4b1ffffbeb1ffff42b2fffff8b2ffffa2b3ffff48b4ffffc8b4ffffccb4ffffa6b5ffffbab5ffff4ab7ffff56b7ffff62b7ffffeab7ffffa0b8ffff4cb9fffff6b9ffff84baffff88baffff26faffffd6fbffffd06b0000e26b00007a7100008c7100008a7700009c770000ac770000ce770000
+      m_ExpandedIDs: 5ce6ffff70e6ffffc4e6ffffcee6ffffd8e6ffff5ce7ffff12e8ffffbce8ffff62e9ffffe2e9ffffe6e9ffff92eaffffa6eaffff36ecffff42ecffff4eecffffd6ecffff8cedffff38eeffffe2eeffff70efffff74efffff8af4ffff9ef4ffff2ef6ffff3af6ffff46f6ffffcef6ffff84f7ffff30f8ffffdaf8ffff68f9ffff6cf9ffff44fbffffa0fbffff565d0000685d0000446400005c640000366b00004e6b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Image
-        m_OriginalName: Image
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 27660
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -554,9 +554,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 408, y: 182.00049, z: 0}
+    m_Target: {x: 304.66397, y: 161.59605, z: 7.2289605}
     speed: 2
-    m_Value: {x: 408, y: 182.00049, z: 0}
+    m_Value: {x: 304.66397, y: 161.59605, z: 7.2289605}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -588,9 +588,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1474.284
+    m_Target: 751.7973
     speed: 2
-    m_Value: 1474.284
+    m_Value: 751.7973
   m_Ortho:
     m_Target: 1
     speed: 2
