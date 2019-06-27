@@ -13,7 +13,6 @@ public class PlayerController : CharacterController
     public const int MANA = 60;
     public const float RESTORING_TIME = 0.1f;
     public const float TAUNTING_TIME = 2.5f;
-    public const float DISTANCE_TILL_PLAYER = 15;
 
     // Movement configuration
     public int mana = MANA;
@@ -74,10 +73,7 @@ public class PlayerController : CharacterController
         if (!(nearbyEnemies.Length == 0))
         {
             foreach (EnemyController enemy in nearbyEnemies) {
-                if((Vector2.Distance(enemy.gameObject.transform.position, this.gameObject.transform.position)) <= DISTANCE_TILL_PLAYER)
-                {
-                    enemy.taunted = true;
-                }
+                enemy.taunted = true;
             }
             isTaunting = true;
             anim.SetTrigger("PlayerTauntAnimTrigger");
