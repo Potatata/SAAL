@@ -119,6 +119,8 @@ namespace Prime31 {
         UIComponentPlayerHearts playerHeartsArray;
 
         private bool isInvincible = false;
+        public Animator anim;
+        private bool isTaunting = false; 
 
         #endregion
 
@@ -332,6 +334,8 @@ namespace Prime31 {
 
                     //Update UI
                     playerHeartsArray.UpdateUIPlayer(PlayerInformation.GetInstance().health);
+                    if (isTaunting) anim.SetTrigger("PlayerTauntHurtAnimTrigger");
+                    else anim.SetTrigger("PlayerStillHurtAnimTrigger");
 
                     //--health;
                     if (PlayerInformation.GetInstance().health <= 0) Died();
@@ -353,6 +357,11 @@ namespace Prime31 {
         public void SetInvincibility(bool invincible)
         {
             isInvincible = invincible;
+        }
+
+        public void SetIsTaunting(bool taunting)
+        {
+            isTaunting = taunting;
         }
 
         protected IEnumerator Invincibility()
