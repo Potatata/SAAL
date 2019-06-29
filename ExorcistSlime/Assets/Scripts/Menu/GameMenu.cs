@@ -13,6 +13,7 @@ public class GameMenu : MonoBehaviour
     public void ClickPlayButton()
     {
         PauseMenuController.isPaused = false;
+        PlayerInformation.GetInstance().RestartGame();
         SceneManager.LoadScene(firstStage);
     }
 
