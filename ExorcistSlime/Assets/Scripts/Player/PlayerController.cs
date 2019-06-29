@@ -9,9 +9,9 @@ public class PlayerController : CharacterController
     public const int SALT_PARTICLES = 16 ;
     public const float DASH_SPEED = SPEED*3;
     public const float DASH_TIME = 0.01f;
-    public const int MANA_COMSUNPTION = 20;
+    public const int MANA_COMSUNPTION = 30;
     public const int MANA = 60;
-    public const float RESTORING_TIME = 0.1f;
+    public const float RESTORING_TIME = 0.083f;
     public const float TAUNTING_TIME = 2.5f;
 
     // Movement configuration
@@ -76,6 +76,7 @@ public class PlayerController : CharacterController
                 enemy.taunted = true;
             }
             isTaunting = true;
+            _controller.SetIsTaunting(isTaunting);
             anim.SetTrigger("PlayerTauntAnimTrigger");
             yield return new WaitForSeconds(TAUNTING_TIME);
             foreach (EnemyController enemy in nearbyEnemies)
@@ -83,6 +84,7 @@ public class PlayerController : CharacterController
                 enemy.taunted = false;
             }
             isTaunting = false;
+            _controller.SetIsTaunting(isTaunting);
             anim.SetTrigger("PlayerReturnTauntAnimTrigger");
         }
     }

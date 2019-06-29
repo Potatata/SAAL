@@ -193,6 +193,7 @@ MonoBehaviour:
     m_Bits: 256
   totalHorizontalRays: 20
   totalVerticalRays: 20
+  anim: {fileID: 8599810226276188393}
 --- !u!114 &2010419192735377251
 MonoBehaviour:
   m_ObjectHideFlags: 0

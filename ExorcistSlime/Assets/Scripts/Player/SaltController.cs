@@ -4,7 +4,7 @@ using UnityEngine;
 public class SaltController : MonoBehaviour
 {
     //Fields
-    public float lifeTime = 1f;
+    public float lifeTime = 2.5f;
     public int life = 1;
 
     public void Start()
@@ -17,7 +17,6 @@ public class SaltController : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(lifeTime);
-            Debug.Log("Hi!");
             --life;
         }
     }
