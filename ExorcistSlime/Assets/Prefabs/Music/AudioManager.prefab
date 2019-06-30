@@ -94,7 +94,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: BossDamage
     clip: {fileID: 8300000, guid: ce0a2ebffce23654596b67017b172bce, type: 3}
-    volume: 0.755
+    volume: 0.93
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -112,6 +112,18 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: DoorOpen
     clip: {fileID: 8300000, guid: 750b8ee43831b974cbcbf31138c4d2dc, type: 3}
+    volume: 0.58
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EmptyStamina
+    clip: {fileID: 8300000, guid: 41d21cae5a71d314992829afb58e96a0, type: 3}
+    volume: 0.31
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ClickSound
+    clip: {fileID: 8300000, guid: db3fd5976ac345e43a4201d40bfd242e, type: 3}
     volume: 0.58
     pitch: 1
     loop: 0

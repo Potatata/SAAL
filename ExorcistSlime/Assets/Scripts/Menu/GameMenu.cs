@@ -12,6 +12,7 @@ public class GameMenu : MonoBehaviour
     /// </summary>
     public void ClickPlayButton()
     {
+        AudioManager.GetInstance().ClickSound();
         PauseMenuController.isPaused = false;
         PlayerInformation.GetInstance().RestartGame();
         SceneManager.LoadScene(firstStage);
@@ -22,6 +23,7 @@ public class GameMenu : MonoBehaviour
     /// </summary>
     public void ClickQuitButton()
     {
+        AudioManager.GetInstance().ClickSound();
         Debug.Log("Hasta la vista");
         Application.Quit();
     }
@@ -31,6 +33,7 @@ public class GameMenu : MonoBehaviour
     /// </summary>
     public void ClickPlayAgainButton()
     {
+        AudioManager.GetInstance().ClickSound();
         PlayerInformation.GetInstance().RestartGame();
         SceneManager.LoadScene(firstStage);
     }
