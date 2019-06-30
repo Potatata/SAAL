@@ -17,4 +17,10 @@ public class EnemySimpleShootsAtPlayerController : EnemyController
         EnemyMovePattern enemyMovePattern = new EnemyMoveToPlayer();
         enemyMovePattern.MovePattern(enemy, player);
     }
+
+    protected override void TakeDamage()
+    {
+        base.TakeDamage();
+        AudioManager.GetInstance().EnemyDamageSound();
+    }
 }

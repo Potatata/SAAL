@@ -95,6 +95,21 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlaySound(string soundName)
+    {
+        Sound soundToPlay = Array.Find(sounds, iteratorSound => iteratorSound.name == soundName);
+
+        //If the sound was not found
+        if (soundToPlay == null)
+        {
+            Debug.Log("Sound " + soundName + "not found");
+            return;
+        }
+
+        soundToPlay.source.Play();
+
+    }
+
 
     //Methods to play songs
     public void PlayMainMenuSong()
@@ -127,5 +142,35 @@ public class AudioManager : MonoBehaviour
         PlayAudio("GameOverSong");
     }
 
+    //Game sounds
+    public void SlimeDamageSound()
+    {
+        PlaySound("SlimeDamage");
+    }
+
+    public void SlimeTauntSound()
+    {
+        PlaySound("SlimeTaunt");
+    }
+
+    public void BossDamageSound()
+    {
+        PlaySound("BossDamage");
+    }
+
+    public void SlimeDashSound()
+    {
+        PlaySound("SlimeDash");
+    }
+
+    public void DoorOpenSound()
+    {
+        PlaySound("DoorOpen");
+    }
+
+    public void EnemyDamageSound()
+    {
+        PlaySound("EnemyDamage");
+    }
 
 }
