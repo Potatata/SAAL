@@ -173,4 +173,16 @@ public class AudioManager : MonoBehaviour
         PlaySound("EnemyDamage");
     }
 
+    public void EmptyStaminaSound()
+    {
+        PlaySound("EmptyStamina");
+    }
+
+    public void ClickSound()
+    {
+        PlaySound("ClickSound");
+    }
+
+    
+
 }

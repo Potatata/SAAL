@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 398}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -44,10 +44,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 683, y: 348}
-  m_MaxSize: {x: 12008, y: 8048}
+  m_MinSize: {x: 683, y: 498}
+  m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 114
+  controlID: 106
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -93,8 +93,8 @@ MonoBehaviour:
     y: 0
     width: 284
     height: 553
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -119,14 +119,14 @@ MonoBehaviour:
     y: 553
     width: 1529
     height: 394
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 19}
+  m_MinSize: {x: 232, y: 274}
+  m_MaxSize: {x: 10002, y: 10024}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 19}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -215,8 +215,8 @@ MonoBehaviour:
     y: 0
     width: 1529
     height: 947
-  m_MinSize: {x: 406, y: 348}
-  m_MaxSize: {x: 8006, y: 8048}
+  m_MinSize: {x: 406, y: 498}
+  m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
   controlID: 54
 --- !u!114 &10
@@ -401,20 +401,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Enemies
+    - Assets/Prefabs/Music
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Enemies
+  - Assets/Prefabs/Music
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Arven\Desktop\SAL\ExorcistSlime
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 80430000
-    m_LastClickedID: 17280
-    m_ExpandedIDs: 00000000fe330000183900003c3a00008e3c0000163d0000e43d00002a4000000242000068440000b84400002e450000f2470000e0490000e249000000ca9a3b
+    scrollPos: {x: 0, y: 120}
+    m_SelectedIDs: 022a0000
+    m_LastClickedID: 10754
+    m_ExpandedIDs: 00000000fa2600000c2c0000342d0000862f00000e300000dc30000026330000fc3400005e370000ae37000024380000ee3a0000863d0000883d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -442,7 +442,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fe330000183900003c3a00008e3c0000163d0000e43d00002a40000068440000b84400002e450000f2470000e0490000e2490000
+    m_ExpandedIDs: 00000000fa2600000c2c0000342d0000862f00000e300000dc30000026330000fc3400005e370000ae37000024380000ee3a0000863d0000883d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -486,7 +486,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 7}
+      m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -561,9 +561,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8665ffff
-      m_LastClickedID: -39546
-      m_ExpandedIDs: c265ffff84a0ffff18b6ffffc2ccffffc6f8ffff94480000da620000
+      m_SelectedIDs: 50590000
+      m_LastClickedID: 22864
+      m_ExpandedIDs: 
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -614,14 +614,14 @@ MonoBehaviour:
     height: 533
   m_PersistentViewDataDictionary: {fileID: 0}
   m_WindowGUID: 0635d26b3b8569d478174211d0170f8a
-  m_SceneLighting: 1
+  m_SceneLighting: 0
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 10.903623, y: 5.1134815, z: 9.620404}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 10.903623, y: 5.1134815, z: 9.620404}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -653,9 +653,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 71.38315
+    m_Target: 22
     speed: 2
-    m_Value: 71.38315
+    m_Value: 22
   m_Ortho:
     m_Target: 1
     speed: 2

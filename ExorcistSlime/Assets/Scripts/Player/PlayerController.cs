@@ -9,7 +9,7 @@ public class PlayerController : CharacterController
     public const int SALT_PARTICLES = 16 ;
     public const float DASH_SPEED = SPEED*3;
     public const float DASH_TIME = 0.01f;
-    public const int MANA_COMSUNPTION = 30;
+    public const int MANA_CONSUMPTION = 30;
     public const int MANA = 60;
     public const float RESTORING_TIME = 0.083f;
     public const float TAUNTING_TIME = 2.5f;
@@ -95,15 +95,22 @@ public class PlayerController : CharacterController
         if (Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") != 0)
         {
             //Player dash mechanic
-            if (Input.GetButtonDown("Fire1") && !isDashing && (mana > MANA_COMSUNPTION) && !PauseMenuController.isPaused)
+            if (Input.GetButtonDown("Fire1") && !isDashing && (mana > MANA_CONSUMPTION) && !PauseMenuController.isPaused)
             {
                 movementSpeed = DASH_SPEED;
-                mana -= MANA_COMSUNPTION;
+                mana -= MANA_CONSUMPTION;
                 // Update UI
                 playerStaminaBar.UpdateUI(new Health { currentHealth = mana, totalHealth = MANA });
                 StartCoroutine(MakeTrail());
                 AudioManager.GetInstance().SlimeDashSound();
                 if(!isRestoringMana) StartCoroutine(RestoreMana());
+            }
+            else
+            {
+                if (mana < MANA_CONSUMPTION && Input.GetButtonDown("Fire1"))
+                {
+                    AudioManager.GetInstance().EmptyStaminaSound();
+                }
             }
         }
     }

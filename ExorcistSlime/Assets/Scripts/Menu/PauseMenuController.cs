@@ -33,6 +33,7 @@ public class PauseMenuController : MonoBehaviour
     /// </summary>
     public void Resume()
     {
+        AudioManager.GetInstance().ClickSound();
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
@@ -42,6 +43,7 @@ public class PauseMenuController : MonoBehaviour
     /// </summary>
     void Pause()
     {
+        AudioManager.GetInstance().ClickSound();
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
@@ -52,6 +54,7 @@ public class PauseMenuController : MonoBehaviour
     /// </summary>
     public void GoMainMenu()
     {
+        AudioManager.GetInstance().ClickSound();
         isPaused = false;
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
