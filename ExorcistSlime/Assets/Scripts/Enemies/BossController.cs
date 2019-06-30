@@ -20,5 +20,7 @@ public abstract class BossController : EnemyController
         base.TakeDamage();
         //Updates the health bar when hit
         healthBar.UpdateUI(health);
+        //Play the damage sound
+        AudioManager.GetInstance().BossDamageSound();
     }
 }

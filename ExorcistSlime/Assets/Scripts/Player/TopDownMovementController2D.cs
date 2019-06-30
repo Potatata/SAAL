@@ -332,6 +332,8 @@ namespace Prime31 {
                     //Take damage and check if he died
                     PlayerInformation.GetInstance().DecreasePlayerHealth();
 
+                    AudioManager.GetInstance().SlimeDamageSound();
+
                     //Update UI
                     playerHeartsArray.UpdateUIPlayer(PlayerInformation.GetInstance().health);
                     if (isTaunting) anim.SetTrigger("PlayerTauntHurtAnimTrigger");

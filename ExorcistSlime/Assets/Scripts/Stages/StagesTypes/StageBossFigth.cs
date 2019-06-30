@@ -3,18 +3,26 @@ using UnityEngine;
 
 public class StageBossFigth : SceneController
 {
-    private GameObject generationPoint;
+    private GameObject[] enemyGenerationPoints;
+    private GameObject bossGenerationPoint;
     private MarkovEnemyGeneration enemyTypeGenerator;
 
     public override void Awake()
     {
         base.Awake();
-        enemyTypeGenerator = new MarkovEnemyGeneration();
-        generationPoint = GameObject.FindGameObjectWithTag("EnemyGenerationPoint");
-        enemiesOnStage = 1;
-        if (generationPoint != null)
+        enemyGenerationPoints = GameObject.FindGameObjectsWithTag("EnemyGenerationPoint");
+        enemiesOnStage = enemyGenerationPoints.Length;
+
+        foreach (GameObject generationPoint in enemyGenerationPoints)
         {
             GenerateEnemy(generationPoint);
+        }
+
+        bossGenerationPoint = GameObject.FindGameObjectWithTag("BossGenerationPoint");
+        if(bossGenerationPoint != null)
+        {
+            GenerateBoss(bossGenerationPoint);
+            ++enemiesOnStage;
         }
     }
 

@@ -37,6 +37,7 @@ public class StageWithEnemies : SceneController
         NextStageDoor door = FindObjectOfType<NextStageDoor>();
         if(door != null)
         {
+            AudioManager.GetInstance().DoorOpenSound();
             door.DestroyDoor();
         }
         playerCanNextStage = true;

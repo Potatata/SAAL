@@ -77,6 +77,7 @@ public class PlayerController : CharacterController
             }
             isTaunting = true;
             _controller.SetIsTaunting(isTaunting);
+            AudioManager.GetInstance().SlimeTauntSound();
             anim.SetTrigger("PlayerTauntAnimTrigger");
             yield return new WaitForSeconds(TAUNTING_TIME);
             foreach (EnemyController enemy in nearbyEnemies)
@@ -101,6 +102,7 @@ public class PlayerController : CharacterController
                 // Update UI
                 playerStaminaBar.UpdateUI(new Health { currentHealth = mana, totalHealth = MANA });
                 StartCoroutine(MakeTrail());
+                AudioManager.GetInstance().SlimeDashSound();
                 if(!isRestoringMana) StartCoroutine(RestoreMana());
             }
         }

@@ -111,11 +111,12 @@ public abstract class SceneController : MonoBehaviour
             case 2:
                 Instantiate(enemyPrefabType2, generationPoint.transform.position, generationPoint.transform.rotation);
                 break;
-            case 3:
-                Instantiate(enemyPrefabDemonLord, generationPoint.transform.position, generationPoint.transform.rotation);
-                break;
             default:
                 break;
         }
+    }
+    protected void GenerateBoss(GameObject bossGenerationPoint)
+    {
+        Instantiate(enemyPrefabDemonLord, bossGenerationPoint.transform.position, bossGenerationPoint.transform.rotation);
     }
 }
