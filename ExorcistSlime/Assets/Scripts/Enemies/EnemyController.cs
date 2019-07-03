@@ -62,7 +62,10 @@ public abstract class EnemyController : CharacterController
     /// </summary>
     public void InTaunt(EnemyController enemy, PlayerController player)
     {
+        //Moves in the desired direction
         enemy.transform.position = Vector2.MoveTowards(enemy.transform.position, player.transform.position, enemy.movementSpeed * Time.deltaTime * SPEED_INCREASE_TAUNT);
+        //Enemy goes towards the player
+        enemy.transform.up = new Vector2(player.transform.position.x - enemy.transform.position.x, player.transform.position.y - enemy.transform.position.y);
     }
 
     /// <summary>
