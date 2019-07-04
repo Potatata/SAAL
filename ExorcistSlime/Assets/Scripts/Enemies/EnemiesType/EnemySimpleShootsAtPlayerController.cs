@@ -6,10 +6,10 @@ public class EnemySimpleShootsAtPlayerController : EnemyController
     public override void Awake()
     {
         base.Awake();
-        health.totalHealth = health.currentHealth = 1f;
+        health.totalHealth = health.currentHealth = 2f;
 
         //Starts the bullet speed type.
-        bullets.Add(new BulletSpeed() { Speed = 2});
+        bullets.Add(new BulletSpeed() { Speed = 4});
     }
 
     protected override void MovePattern(EnemyController enemy, PlayerController player)
